@@ -39,6 +39,10 @@ const products = require('./routes/products');
 app.use('/products', products);
 
 
+app.get('*',function (req,res) {
+    res.sendFile(path.join(__dirname,'./public/index.html'))
+});
+
 app.listen(port, () => {
     console.log('Main server app listening on port ' + port);
 });
