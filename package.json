@@ -1,0 +1,49 @@
+{
+  "name": "courseproject",
+  "version": "1.0.0",
+  "description": "my course project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "@angular/common": "^5.2.10",
+    "@angular/core": "^5.2.10",
+    "angular2-moment": "^1.7.0",
+    "bcrypt": "^2.0.1",
+    "bcryptjs": "*",
+    "body-parser": "^1.18.2",
+    "chart.js": "^2.7.1",
+    "cors": "^2.8.4",
+    "curl": "^0.1.4",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "jquery": "^3.2.1",
+    "jsonwebtoken": "*",
+    "module": "^1.2.5",
+    "moment": "^2.19.2",
+    "momentjs": "^2.0.0",
+    "mongo": "^0.1.0",
+    "mongodb": "^2.2.33",
+    "mongoose": "^5.0.15",
+    "morgan": "^1.9.0",
+    "ng2-charts": "^1.6.0",
+    "node-forge": "^0.7.5",
+    "node-schedule": "^1.2.5",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7",
+    "rxjs": "^5.5.10",
+    "seneca": "^3.4.3",
+    "socket.io": "^2.1.0",
+    "socket.io-client": "^2.1.0",
+    "socketio": "^1.0.0",
+    "zone.js": "^0.8.26"
+  },
+  "author": "serhii",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jquery": "^3.2.16"
+  }
+}
