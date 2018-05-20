@@ -5,7 +5,6 @@ const passport = require('passport');
 
 const Customer = require('../models/customer');
 const Consultant = require('../models/consultant');
-const ChatApp = require('../chat');
 
 const encryptor = require('../config/encryption');
 const config = require('../config/database');

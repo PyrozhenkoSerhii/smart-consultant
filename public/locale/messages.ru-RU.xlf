@@ -19,8 +19,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="customerUsernamePlaceholder" datatype="html">
-        <source>Username</source>
-        <target>Имя пользователя</target>
+         <source>Username (will be userd while login)</source>
+        <target>Имя пользователя (будет использовано при входе)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -180,8 +180,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="consultantUsernamePlaceholder" datatype="html">
-        <source>Username</source>
-        <target>Имя пользователя</target>
+         <source>Username (will be used while login)</source>
+        <target>Имя пользователя (будет использовано при входе)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
           <context context-type="linenumber">17</context>

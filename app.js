@@ -3,7 +3,6 @@ const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const chatModule = require('./chat');
 const config = require('./config/database');
 const passport = require('passport');
 const port = process.env.PORT || 8000;
@@ -14,7 +13,6 @@ mongoose.connect(config.connectionString, (err) => {
         if (err) console.log('Database error' + err);
         else {
             console.log('Connected to database ' + config.dbName);
-            // chatModule.socketCreation();
         }
     }
 );
@@ -39,20 +37,17 @@ app.use('/consultants', consultants);
 const products = require('./routes/products');
 app.use('/products', products);
 
-
-app.get('*',function (req,res) {
-    res.sendFile(path.join(__dirname,'./public/index.html'))
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, './public/index.html'))
 });
-
-// app.listen(port, () => {
-//     console.log('Main server app listening on port ' + port);
-// });
 
 let http = require('http').Server(app);
 
 http.listen(port, () => {
     console.log('Main server app listening on port ' + port);
 });
+
+// sockets
 let serverSocket = require('socket.io')(http);
 
 serverSocket.on('connection', (clientSocket) => {
@@ -78,9 +73,9 @@ serverSocket.on('connection', (clientSocket) => {
                         isSystemMessage: true
                     });
 
-                    Chat.addPrivateMessage(serverMessage, (err,res)=>{
-                        if(err) console.log(err);
-                        else{
+                    Chat.addPrivateMessage(serverMessage, (err, res) => {
+                        if (err) console.log(err);
+                        else {
                             Chat.getAllByRoom(req.data.room, (err, res) => {
                                 if (err) console.log(err);
                                 serverSocket.to(req.data.room).emit('output', res);
@@ -88,6 +83,8 @@ serverSocket.on('connection', (clientSocket) => {
                             })
                         }
                     });
+
+                    serverSocket.to(req.data.room).emit('currentProduct', req.data.product);
                 }
             }
         });
@@ -106,16 +103,15 @@ serverSocket.on('connection', (clientSocket) => {
                 });
 
                 console.log('time' + data.time);
-                Chat.getAllByRoomAndTime(data.chat.room, data.time, (err,res)=>{
-                    if(err)console.log(err);
+                Chat.getAllByRoomAndTime(data.chat.room, data.time, (err, res) => {
+                    if (err) console.log(err);
                     serverSocket.to(data.chat.room).emit('customerOutput', res);
                 })
             }
         });
     });
 
-    clientSocket.on('disconnectedMessage', (data)=>{
-
+    clientSocket.on('disconnectedMessage', (data) => {
         let serverMessage = new Chat({
             user: 'system',
             message: data.user + ' left the room',
@@ -126,9 +122,9 @@ serverSocket.on('connection', (clientSocket) => {
             isSystemMessage: true
         });
 
-        Chat.addPrivateMessage(serverMessage, (err)=>{
-            if(err) console.log(err);
-            else{
+        Chat.addPrivateMessage(serverMessage, (err) => {
+            if (err) console.log(err);
+            else {
                 Chat.getAllByRoom(data.room, (err, res) => {
                     if (err) console.log(err);
                     serverSocket.to(data.room).emit('output', res);
@@ -138,20 +134,12 @@ serverSocket.on('connection', (clientSocket) => {
         });
     });
 
-    clientSocket.on('disconnect', ()=>{
+    clientSocket.on('disconnect', () => {
         console.log('user disconnected');
     });
 
-    clientSocket.on('forum', ()=>{
+    clientSocket.on('forum', () => {
         Chat.getAllByRoom()
-    });
-
-    // hellman
-    clientSocket.on('hellmanInitializeCustomerData', (data) => {
-        serverSocket.to(data.room).emit('receiveFromCustomer', data);
-    });
-    clientSocket.on('hellmanInitializeConsultantData', (data)=>{
-        serverSocket.to(data.room).emit('receiveFromConsultant', data);
     });
 });
 

@@ -355,18 +355,16 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_product_components_catalog_catalog_component__ = __webpack_require__("./src/app/components/product-components/catalog/catalog.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_profile_profile_component__ = __webpack_require__("./src/app/components/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_chat_components_forum_forum_component__ = __webpack_require__("./src/app/components/chat-components/forum/forum.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_product_components_creation_creation_component__ = __webpack_require__("./src/app/components/product-components/creation/creation.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_product_components_product_view_product_view_component__ = __webpack_require__("./src/app/components/product-components/product-view/product-view.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_chat_components_selector_selector_component__ = __webpack_require__("./src/app/components/chat-components/selector/selector.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_product_components_order_order_component__ = __webpack_require__("./src/app/components/product-components/order/order.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_chat_service__ = __webpack_require__("./src/app/services/chat.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_profile_service__ = __webpack_require__("./src/app/services/profile.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_product_service__ = __webpack_require__("./src/app/services/product.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_modals_OrderModal__ = __webpack_require__("./src/app/components/modals/OrderModal.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_modals_ChatRateModal__ = __webpack_require__("./src/app/components/modals/ChatRateModal.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__guards_page_access_guard__ = __webpack_require__("./src/app/guards/page-access.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_product_components_creation_creation_component__ = __webpack_require__("./src/app/components/product-components/creation/creation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_product_components_product_view_product_view_component__ = __webpack_require__("./src/app/components/product-components/product-view/product-view.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_chat_components_selector_selector_component__ = __webpack_require__("./src/app/components/chat-components/selector/selector.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_product_components_order_order_component__ = __webpack_require__("./src/app/components/product-components/order/order.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_profile_service__ = __webpack_require__("./src/app/services/profile.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_product_service__ = __webpack_require__("./src/app/services/product.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_modals_OrderModal__ = __webpack_require__("./src/app/components/modals/OrderModal.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_modals_ChatRateModal__ = __webpack_require__("./src/app/components/modals/ChatRateModal.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__guards_page_access_guard__ = __webpack_require__("./src/app/guards/page-access.guard.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -397,9 +395,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 // services
-
 
 
 
@@ -414,14 +410,13 @@ var appRoutes = [
     { path: 'companyRegistration', component: __WEBPACK_IMPORTED_MODULE_12__components_common_components_company_registration_company_registration_component__["a" /* CompanyRegistrationComponent */] },
     { path: 'consultantRegistration', component: __WEBPACK_IMPORTED_MODULE_11__components_common_components_consultant_registration_consultant_registration_component__["a" /* ConsultantRegistrationComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_13__components_common_components_login_login_component__["a" /* LoginComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_18__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_30__guards_page_access_guard__["a" /* PageAccessGuard */]] },
-    { path: 'chat/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_chat_components_chat_chat_component__["a" /* ChatComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_30__guards_page_access_guard__["a" /* PageAccessGuard */]] },
-    { path: 'forum', component: __WEBPACK_IMPORTED_MODULE_19__components_chat_components_forum_forum_component__["a" /* ForumComponent */] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_18__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_28__guards_page_access_guard__["a" /* PageAccessGuard */]] },
+    { path: 'chat/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_chat_components_chat_chat_component__["a" /* ChatComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_28__guards_page_access_guard__["a" /* PageAccessGuard */]] },
     { path: 'catalog', component: __WEBPACK_IMPORTED_MODULE_17__components_product_components_catalog_catalog_component__["a" /* CatalogComponent */] },
-    { path: 'creation', component: __WEBPACK_IMPORTED_MODULE_20__components_product_components_creation_creation_component__["a" /* CreationComponent */] },
-    { path: 'product-view/:id', component: __WEBPACK_IMPORTED_MODULE_21__components_product_components_product_view_product_view_component__["a" /* ProductViewComponent */] },
-    { path: 'selector', component: __WEBPACK_IMPORTED_MODULE_22__components_chat_components_selector_selector_component__["a" /* SelectorComponent */] },
-    { path: 'order/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_product_components_order_order_component__["a" /* OrderComponent */] },
+    { path: 'creation', component: __WEBPACK_IMPORTED_MODULE_19__components_product_components_creation_creation_component__["a" /* CreationComponent */] },
+    { path: 'product-view/:id', component: __WEBPACK_IMPORTED_MODULE_20__components_product_components_product_view_product_view_component__["a" /* ProductViewComponent */] },
+    { path: 'selector', component: __WEBPACK_IMPORTED_MODULE_21__components_chat_components_selector_selector_component__["a" /* SelectorComponent */] },
+    { path: 'order/:id', component: __WEBPACK_IMPORTED_MODULE_22__components_product_components_order_order_component__["a" /* OrderComponent */] },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -439,13 +434,12 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_16__components_home_home_component__["a" /* HomeComponent */],
                 __WEBPACK_IMPORTED_MODULE_17__components_product_components_catalog_catalog_component__["a" /* CatalogComponent */],
                 __WEBPACK_IMPORTED_MODULE_18__components_profile_profile_component__["a" /* ProfileComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__components_chat_components_forum_forum_component__["a" /* ForumComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__components_product_components_creation_creation_component__["a" /* CreationComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__components_product_components_product_view_product_view_component__["a" /* ProductViewComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__components_chat_components_selector_selector_component__["a" /* SelectorComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__components_product_components_order_order_component__["a" /* OrderComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__components_modals_OrderModal__["a" /* OrderModalComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__components_modals_ChatRateModal__["a" /* ChatRateModalComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__components_product_components_creation_creation_component__["a" /* CreationComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__components_product_components_product_view_product_view_component__["a" /* ProductViewComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__components_chat_components_selector_selector_component__["a" /* SelectorComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__components_product_components_order_order_component__["a" /* OrderComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__components_modals_OrderModal__["a" /* OrderModalComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__components_modals_ChatRateModal__["a" /* ChatRateModalComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* RouterModule */].forRoot(appRoutes),
@@ -457,7 +451,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7_ngx_clipboard__["a" /* ClipboardModule */],
                 __WEBPACK_IMPORTED_MODULE_6_ngx_toggle_switch__["a" /* UiSwitchModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_24__services_chat_service__["a" /* ChatService */], __WEBPACK_IMPORTED_MODULE_30__guards_page_access_guard__["a" /* PageAccessGuard */], __WEBPACK_IMPORTED_MODULE_25__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_26__services_profile_service__["a" /* ProfileService */], __WEBPACK_IMPORTED_MODULE_27__services_product_service__["a" /* ProductService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_28__guards_page_access_guard__["a" /* PageAccessGuard */], __WEBPACK_IMPORTED_MODULE_23__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_24__services_profile_service__["a" /* ProfileService */], __WEBPACK_IMPORTED_MODULE_25__services_product_service__["a" /* ProductService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -569,355 +563,6 @@ var Customer = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/classes/des.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Des; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pair__ = __webpack_require__("./src/app/classes/pair.ts");
-
-var Des = /** @class */ (function () {
-    function Des() {
-        this.PC1 = [
-            57, 49, 41, 33, 25, 17, 9,
-            1, 58, 50, 42, 34, 26, 18,
-            10, 2, 59, 51, 43, 35, 27,
-            19, 11, 3, 60, 52, 44, 36,
-            63, 55, 47, 39, 31, 23, 15,
-            7, 62, 54, 46, 38, 30, 22,
-            14, 6, 61, 53, 45, 37, 29,
-            21, 13, 5, 28, 20, 12, 4
-        ];
-        this.PC2 = [
-            14, 17, 11, 24, 1, 5,
-            3, 28, 15, 6, 21, 10,
-            23, 19, 12, 4, 26, 8,
-            16, 7, 27, 20, 13, 2,
-            41, 52, 31, 37, 47, 55,
-            30, 40, 51, 45, 33, 48,
-            44, 49, 39, 56, 34, 53,
-            46, 42, 50, 36, 29, 32
-        ];
-        this.IP = [
-            58, 50, 42, 34, 26, 18, 10, 2,
-            60, 52, 44, 36, 28, 20, 12, 4,
-            62, 54, 46, 38, 30, 22, 14, 6,
-            64, 56, 48, 40, 32, 24, 16, 8,
-            57, 49, 41, 33, 25, 17, 9, 1,
-            59, 51, 43, 35, 27, 19, 11, 3,
-            61, 53, 45, 37, 29, 21, 13, 5,
-            63, 55, 47, 39, 31, 23, 15, 7
-        ];
-        this.IPINV = [
-            40, 8, 48, 16, 56, 24, 64, 32,
-            39, 7, 47, 15, 55, 23, 63, 31,
-            38, 6, 46, 14, 54, 22, 62, 30,
-            37, 5, 45, 13, 53, 21, 61, 29,
-            36, 4, 44, 12, 52, 20, 60, 28,
-            35, 3, 43, 11, 51, 19, 59, 27,
-            34, 2, 42, 10, 50, 18, 58, 26,
-            33, 1, 41, 9, 49, 17, 57, 25
-        ];
-        this.E = [
-            32, 1, 2, 3, 4, 5,
-            4, 5, 6, 7, 8, 9,
-            8, 9, 10, 11, 12, 13,
-            12, 13, 14, 15, 16, 17,
-            16, 17, 18, 19, 20, 21,
-            20, 21, 22, 23, 24, 25,
-            24, 25, 26, 27, 28, 29,
-            28, 29, 30, 31, 32, 1
-        ];
-        this.P = [
-            16, 7, 20, 21,
-            29, 12, 28, 17,
-            1, 15, 23, 26,
-            5, 18, 31, 10,
-            2, 8, 24, 14,
-            32, 27, 3, 9,
-            19, 13, 30, 6,
-            22, 11, 4, 25
-        ];
-        this.SBoxes = [
-            [
-                14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7,
-                0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8,
-                4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0,
-                15, 12, 8, 2, 4, 9, 1, 7, 5, 11, 3, 14, 10, 0, 6, 13
-            ],
-            [
-                15, 1, 8, 14, 6, 11, 3, 4, 9, 7, 2, 13, 12, 0, 5, 10,
-                3, 13, 4, 7, 15, 2, 8, 14, 12, 0, 1, 10, 6, 9, 11, 5,
-                0, 14, 7, 11, 10, 4, 13, 1, 5, 8, 12, 6, 9, 3, 2, 15,
-                13, 8, 10, 1, 3, 15, 4, 2, 11, 6, 7, 12, 0, 5, 14, 9
-            ],
-            [
-                10, 0, 9, 14, 6, 3, 15, 5, 1, 13, 12, 7, 11, 4, 2, 8,
-                13, 7, 0, 9, 3, 4, 6, 10, 2, 8, 5, 14, 12, 11, 15, 1,
-                13, 6, 4, 9, 8, 15, 3, 0, 11, 1, 2, 12, 5, 10, 14, 7,
-                1, 10, 13, 0, 6, 9, 8, 7, 4, 15, 14, 3, 11, 5, 2, 12
-            ],
-            [
-                7, 13, 14, 3, 0, 6, 9, 10, 1, 2, 8, 5, 11, 12, 4, 15,
-                13, 8, 11, 5, 6, 15, 0, 3, 4, 7, 2, 12, 1, 10, 14, 9,
-                10, 6, 9, 0, 12, 11, 7, 13, 15, 1, 3, 14, 5, 2, 8, 4,
-                3, 15, 0, 6, 10, 1, 13, 8, 9, 4, 5, 11, 12, 7, 2, 14
-            ],
-            [
-                2, 12, 4, 1, 7, 10, 11, 6, 8, 5, 3, 15, 13, 0, 14, 9,
-                14, 11, 2, 12, 4, 7, 13, 1, 5, 0, 15, 10, 3, 9, 8, 6,
-                4, 2, 1, 11, 10, 13, 7, 8, 15, 9, 12, 5, 6, 3, 0, 14,
-                11, 8, 12, 7, 1, 14, 2, 13, 6, 15, 0, 9, 10, 4, 5, 3
-            ],
-            [
-                12, 1, 10, 15, 9, 2, 6, 8, 0, 13, 3, 4, 14, 7, 5, 11,
-                10, 15, 4, 2, 7, 12, 9, 5, 6, 1, 13, 14, 0, 11, 3, 8,
-                9, 14, 15, 5, 2, 8, 12, 3, 7, 0, 4, 10, 1, 13, 11, 6,
-                4, 3, 2, 12, 9, 5, 15, 10, 11, 14, 1, 7, 6, 0, 8, 13
-            ],
-            [
-                4, 11, 2, 14, 15, 0, 8, 13, 3, 12, 9, 7, 5, 10, 6, 1,
-                13, 0, 11, 7, 4, 9, 1, 10, 14, 3, 5, 12, 2, 15, 8, 6,
-                1, 4, 11, 13, 12, 3, 7, 14, 10, 15, 6, 8, 0, 5, 9, 2,
-                6, 11, 13, 8, 1, 4, 10, 7, 9, 5, 0, 15, 14, 2, 3, 12
-            ],
-            [
-                13, 2, 8, 4, 6, 15, 11, 1, 10, 9, 3, 14, 5, 0, 12, 7,
-                1, 15, 13, 8, 10, 3, 7, 4, 12, 5, 6, 11, 0, 14, 9, 2,
-                7, 11, 4, 1, 9, 12, 14, 2, 0, 6, 10, 13, 15, 3, 5, 8,
-                2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11
-            ]
-        ];
-        this.LeftShifts = [1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 1];
-        this.sizeOfBlock = 64;
-    }
-    Des.FitTextToRightLength = function (text) {
-        while (text.length % 64 !== 0) {
-            text = '0' + text;
-        }
-        return text;
-    };
-    Des.TextToBinaryFormat = function (text) {
-        var binaryResult = '';
-        var tempStr = '';
-        for (var i = 0; i < text.length; i++) {
-            tempStr = text[i].charCodeAt(0).toString(2);
-            tempStr = new Array(9 - tempStr.length).join('0') + tempStr;
-            binaryResult += tempStr;
-        }
-        return binaryResult;
-    };
-    Des.Permute = function (text, array) {
-        var result = '';
-        for (var i = 0; i < array.length; i++) {
-            result += text[array[i] - 1];
-        }
-        return result;
-    };
-    Des.TextLeftShift = function (text, shift) {
-        var array = text.split('');
-        for (var i = 0; i < shift; i++) {
-            var tempChar = array[0];
-            for (var j = 0; j < array.length; j++) {
-                array[j] = array[j + 1];
-            }
-            array[array.length - 1] = tempChar;
-        }
-        return array.join('');
-    };
-    Des.DeleteZeros = function (text) {
-        var result = '';
-        for (var i = 0; i < text.length; i += 8) {
-            var tempStr = text.substr(i, 8);
-            if (tempStr.includes('1')) {
-                result += tempStr;
-            }
-        }
-        return result;
-    };
-    Des.XoR = function (a, b) {
-        if (a === '0' && b === '0') {
-            return '0';
-        }
-        if (a === '1' && b === '0') {
-            return '1';
-        }
-        if (a === '0' && b === '1') {
-            return '1';
-        }
-        if (a === '1' && b === '1') {
-            return '0';
-        }
-    };
-    Des.prototype.BinaryStringToTextString = function (text) {
-        var hexText = '';
-        var result = '';
-        for (var i = 0; i < text.length; i += 8) {
-            hexText += parseInt(text.substr(i, 8), 2).toString(16);
-        }
-        for (var i = 0; i < hexText.length; i += 2) {
-            result += String.fromCharCode(parseInt(hexText.substr(i, 2), 16));
-        }
-        return result;
-    };
-    Des.prototype.BinaryStringToHexString = function (text) {
-        var hexText = '';
-        for (var i = 0; i < text.length; i += 8) {
-            hexText += parseInt(text.substr(i, 8), 2).toString(16);
-        }
-        return hexText;
-    };
-    Des.prototype.DivideIntoBlocks = function (text) {
-        var blocks = [];
-        text = Des.FitTextToRightLength(text);
-        for (var i = 0; i < text.length / this.sizeOfBlock; i++) {
-            blocks.push(text.substr(i * this.sizeOfBlock, this.sizeOfBlock));
-        }
-        return blocks.reverse();
-    };
-    Des.prototype.PrepareKeyPairs = function (key) {
-        var keyPairs = [];
-        var leftSubKey = key.substr(0, 28);
-        var rightSubKey = key.substr(28, 28);
-        for (var i = 0; i < 16; i++) {
-            leftSubKey = Des.TextLeftShift(leftSubKey, this.LeftShifts[i]);
-            rightSubKey = Des.TextLeftShift(rightSubKey, this.LeftShifts[i]);
-            keyPairs.push(new __WEBPACK_IMPORTED_MODULE_0__pair__["a" /* Pair */](leftSubKey, rightSubKey));
-        }
-        return keyPairs;
-    };
-    Des.prototype.PrepareKeys = function (keyPairs) {
-        var keys = [];
-        var concatenatedKey = '';
-        for (var i = 0; i < keyPairs.length; i++) {
-            concatenatedKey = keyPairs[i].left + keyPairs[i].right;
-            keys.push(Des.Permute(concatenatedKey, this.PC2));
-        }
-        return keys;
-    };
-    Des.prototype.SBoxSubstitution = function (part, sBoxNum) {
-        var result = '';
-        var row = part.substr(0, 1) + part.substr(5, 1);
-        var col = part.substr(1, 4);
-        var rowNum = parseInt(row, 2);
-        var colNum = parseInt(col, 2);
-        var sBox = this.SBoxes[sBoxNum][colNum + rowNum * 16];
-        result = sBox.toString(2);
-        while (result.length < 4) {
-            result = '0' + result;
-        }
-        return result;
-    };
-    Des.prototype.Encrypt = function (text, key) {
-        var encryptedText = '';
-        // keys preparing
-        key = Des.FitTextToRightLength(Des.TextToBinaryFormat(key));
-        var key56 = Des.Permute(key, this.PC1);
-        var keyPairs = this.PrepareKeyPairs(key56);
-        var keys = this.PrepareKeys(keyPairs);
-        // text preparing
-        text = Des.TextToBinaryFormat(text);
-        var textBlocks = this.DivideIntoBlocks(text);
-        // Feistel cipher
-        var textBlock = '';
-        for (var i = 0; i < textBlocks.length; i++) {
-            textBlock = Des.Permute(textBlocks[i], this.IP);
-            var leftPart = textBlock.substr(0, 32);
-            var rightPart = textBlock.substr(32, 32);
-            var unitPart = '';
-            var tempPart = '';
-            for (var j = 0; j < 16; j++) {
-                tempPart = rightPart;
-                // permutation with extension
-                rightPart = Des.Permute(rightPart, this.E);
-                var xorRightPart = '';
-                var iterationKey = keys[j];
-                // XOR
-                for (var k = 0; k < rightPart.length; k++) {
-                    xorRightPart += Des.XoR(rightPart[k], iterationKey[k]);
-                }
-                rightPart = xorRightPart;
-                xorRightPart = '';
-                // sBoxes
-                var sBoxedRightPart = '';
-                for (var k = 0; k < 8; k++) {
-                    var sixBitPart = rightPart.substr(k * 6, 6);
-                    sBoxedRightPart += this.SBoxSubstitution(sixBitPart, k);
-                }
-                rightPart = sBoxedRightPart;
-                rightPart = Des.Permute(rightPart, this.P);
-                // right-left xor
-                for (var k = 0; k < rightPart.length; k++) {
-                    xorRightPart += Des.XoR(rightPart[k], leftPart[k]);
-                }
-                rightPart = xorRightPart;
-                leftPart = tempPart;
-            }
-            unitPart = rightPart + leftPart;
-            unitPart = Des.Permute(unitPart, this.IPINV);
-            encryptedText += unitPart;
-        }
-        return encryptedText;
-    };
-    Des.prototype.Decrypt = function (encryptedText, key) {
-        // keys preparing
-        key = Des.FitTextToRightLength(Des.TextToBinaryFormat(key));
-        var key56 = Des.Permute(key, this.PC1);
-        var keyPairs = this.PrepareKeyPairs(key56);
-        var keys = this.PrepareKeys(keyPairs);
-        var decryptedText = '';
-        var textBlocks = this.DivideIntoBlocks(encryptedText);
-        // Feistel cipher
-        var textBlock = '';
-        for (var i = 0; i < textBlocks.length; i++) {
-            textBlock = Des.Permute(textBlocks[i], this.IP);
-            var leftPart = textBlock.substr(0, 32);
-            var rightPart = textBlock.substr(32, 32);
-            var unitPart = '';
-            var tempPart = '';
-            for (var j = 15; j >= 0; j--) {
-                tempPart = rightPart;
-                // permutation with extension
-                rightPart = Des.Permute(rightPart, this.E);
-                var xorRightPart = '';
-                var iterationKey = keys[j];
-                // XOR
-                for (var k = 0; k < rightPart.length; k++) {
-                    xorRightPart += Des.XoR(rightPart[k], iterationKey[k]);
-                }
-                rightPart = xorRightPart;
-                xorRightPart = '';
-                // sBoxes
-                var sBoxedRightPart = '';
-                for (var k = 0; k < 8; k++) {
-                    var sixBitPart = rightPart.substr(k * 6, 6);
-                    sBoxedRightPart += this.SBoxSubstitution(sixBitPart, k);
-                }
-                rightPart = sBoxedRightPart;
-                rightPart = Des.Permute(rightPart, this.P);
-                // right-left xor
-                for (var k = 0; k < rightPart.length; k++) {
-                    xorRightPart += Des.XoR(rightPart[k], leftPart[k]);
-                }
-                rightPart = xorRightPart;
-                leftPart = tempPart;
-            }
-            unitPart = rightPart + leftPart;
-            unitPart = Des.Permute(unitPart, this.IPINV);
-            decryptedText += unitPart;
-        }
-        // text restoring and saving
-        decryptedText = Des.DeleteZeros(decryptedText);
-        decryptedText = this.BinaryStringToTextString(decryptedText);
-        return decryptedText;
-    };
-    return Des;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/classes/order.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -936,23 +581,6 @@ var Order = /** @class */ (function () {
         this.date = date;
     }
     return Order;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/classes/pair.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Pair; });
-var Pair = /** @class */ (function () {
-    function Pair(left, right) {
-        this.left = left;
-        this.right = right;
-    }
-    return Pair;
 }());
 
 
@@ -1036,7 +664,7 @@ var WorkRequest = /** @class */ (function () {
 /***/ "./src/app/components/chat-components/chat/chat.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-md-3\">\r\n      <div *ngIf=\"userType === 'customer'\" class=\"productWrapper\">\r\n        <h4 style=\"text-align: center;\" i18n=\"@@chatChosenProduct\">Chosen product</h4>\r\n        <hr/>\r\n        <img class=\"productImage\" src=\"{{product.image}}\">\r\n        <h6 align=\"center\">{{product.title}}</h6>\r\n        <h6 align=\"center\">{{product.price}}$</h6>\r\n        <hr/>\r\n        <div class=\"row\">\r\n          <div class=\"col-md-9\">\r\n            <app-chat-rate-modal (click)=\"EndConsultation()\">\r\n              <button class=\"btn btn-md btn-primary\" (click)=\"EndConsultation()\"\r\n                      i18n=\"@@chatConsultantEnding\">End Consultation\r\n              </button>\r\n            </app-chat-rate-modal>\r\n\r\n          </div>\r\n          <div class=\"col-md-3\">\r\n            <button class=\"profileButton btnCopy\" ngxClipboard [cbContent]=\"productURL\"></button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"col-md-6\">\r\n      <form (submit)=\"SendMessage()\" class=\"form-horizontal\">\r\n\r\n        <div class=\"profileWrapper\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-2\">\r\n              <img src=\"{{user.profileImg}}\" style=\"height: 50px\">\r\n            </div>\r\n            <div class=\"col-md-3\">\r\n              <h3>{{user.username}}</h3>\r\n            </div>\r\n            <div class=\"col-md-5\"></div>\r\n            <div *ngIf=\"userType === 'consultant'\" class=\"col-md-2\">\r\n              <ui-switch [disabled]=\"disabledBtn\" [checked]=\"user.available\"\r\n                         (change)=\"ChangeAvailability($event)\"></ui-switch>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <ngx-flash-messages></ngx-flash-messages>\r\n        <div class=\"wrapper\">\r\n\r\n          <div *ngFor=\"let chat of chatData\">\r\n\r\n            <div *ngIf=\"!chat.isSystemMessage\">\r\n              <div class=\"message {{user.username == chat.user ? 'ownMessage' : 'othersMessage'}}\">\r\n                <div class=\"row\">\r\n                  <div class=\"row-md-3\">\r\n                    <img src={{chat.profileImg}} style=\"width: 50px; margin-right:  20px ;\">\r\n                  </div>\r\n                  <div class=\"row-md-8\">\r\n                    <h5>{{chat.user}}{{type === 'consultant' ? '(consultant)' : ''}}</h5>\r\n                    <p>{{chat.message}}</p>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div *ngIf=\"chat.isSystemMessage && userType === 'consultant'\">\r\n              <div class=\"systemMessage\">\r\n                {{chat.message}}\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n\r\n        </div>\r\n\r\n        <div class=\"input-group\">\r\n          <input  type=\"text\" [(ngModel)]=\"message\" name=\"message\" class=\"form-control inputMessage\"\r\n                  i18n-placeholder=\"@@chatMessagePlaceholder\" placeholder=\"Message\">\r\n          <span class=\"input-group-btn\">\r\n               <input type=\"submit\" class=\"btn btn-primary center-block\" i18n-value=\"@@chatBtnSend\" value=\"Send\">\r\n          </span>\r\n        </div>\r\n      </form>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <div class=\"row\">\r\n\r\n    <div class=\"col-md-3\">\r\n      <div *ngIf=\"product !== undefined\" class=\"productWrapper\">\r\n        <h4 style=\"text-align: center;\" i18n=\"@@chatChosenProduct\">Chosen product</h4>\r\n        <hr/>\r\n        <img class=\"productImage\" src=\"{{product.image}}\">\r\n        <h6 align=\"center\">{{product.title}}</h6>\r\n        <h6 align=\"center\">{{product.price}}$</h6>\r\n        <hr/>\r\n\r\n        <div *ngIf=\"userType === 'customer'\" class=\"row\">\r\n          <div class=\"col-md-9\">\r\n            <app-chat-rate-modal (click)=\"EndConsultation()\">\r\n              <button class=\"btn btn-md btn-primary\" (click)=\"EndConsultation()\"\r\n                      i18n=\"@@chatConsultantEnding\">End Consultation\r\n              </button>\r\n            </app-chat-rate-modal>\r\n          </div>\r\n          <div class=\"col-md-3\">\r\n            <button class=\"profileButton btnCopy\" ngxClipboard [cbContent]=\"productURL\"></button>\r\n          </div>\r\n        </div>\r\n\r\n        <div *ngIf=\"userType === 'consultant'\" class=\"row\" style=\"margin-left: 20px; padding: 0\">\r\n          <h4 style=\"text-align: center\" i18n=\"@@productViewSpecification\">Specification:</h4>\r\n          <div *ngFor=\"let spec of product.specification\">\r\n            <p>{{spec.name}}:{{spec.value}}</p>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n\r\n\r\n    <div class=\"col-md-6\">\r\n      <form (submit)=\"SendMessage()\" class=\"form-horizontal\">\r\n\r\n        <div class=\"profileWrapper\">\r\n          <div class=\"row\">\r\n            <div class=\"col-md-2\">\r\n              <img src=\"{{user.profileImg}}\" style=\"height: 50px\">\r\n            </div>\r\n            <div class=\"col-md-3\">\r\n              <h3>{{user.username}}</h3>\r\n            </div>\r\n            <div class=\"col-md-5\"></div>\r\n            <div *ngIf=\"userType === 'consultant'\" class=\"col-md-2\">\r\n              <ui-switch [disabled]=\"disabledBtn\" [checked]=\"user.available\"\r\n                         (change)=\"ChangeAvailability($event)\"></ui-switch>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n\r\n        <ngx-flash-messages></ngx-flash-messages>\r\n        <div class=\"wrapper\">\r\n\r\n          <div *ngFor=\"let chat of chatData\">\r\n\r\n            <div *ngIf=\"!chat.isSystemMessage\">\r\n              <div class=\"message {{user.username == chat.user ? 'ownMessage' : 'othersMessage'}}\">\r\n                <div class=\"row\">\r\n                  <div class=\"row-md-3\">\r\n                    <img src={{chat.profileImg}} style=\"width: 50px; margin-right:  20px ;\">\r\n                  </div>\r\n                  <div class=\"row-md-8\">\r\n                    <h5>{{chat.user}}{{type === 'consultant' ? '(consultant)' : ''}}</h5>\r\n                    <p>{{chat.message}}</p>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n\r\n            <div *ngIf=\"chat.isSystemMessage && userType === 'consultant'\">\r\n              <div class=\"systemMessage\">\r\n                {{chat.message}}\r\n              </div>\r\n            </div>\r\n\r\n          </div>\r\n\r\n        </div>\r\n\r\n        <div class=\"input-group\">\r\n          <input  type=\"text\" [(ngModel)]=\"message\" name=\"message\" class=\"form-control inputMessage\"\r\n                  i18n-placeholder=\"@@chatMessagePlaceholder\" placeholder=\"Message\">\r\n          <span class=\"input-group-btn\">\r\n               <input type=\"submit\" class=\"btn btn-primary center-block\" i18n-value=\"@@chatBtnSend\" value=\"Send\">\r\n          </span>\r\n        </div>\r\n      </form>\r\n\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1056,11 +684,9 @@ module.exports = ".wrapper {\n  border: 2px solid #cacaca;\n  position: relative
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client__ = __webpack_require__("./node_modules/socket.io-client/lib/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_socket_io_client__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_chat__ = __webpack_require__("./src/app/classes/chat.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_chat_service__ = __webpack_require__("./src/app/services/chat.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_flash_messages__ = __webpack_require__("./node_modules/ngx-flash-messages/lib-dist/flash-messages.module.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_profile_service__ = __webpack_require__("./src/app/services/profile.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_des__ = __webpack_require__("./src/app/classes/des.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_flash_messages__ = __webpack_require__("./node_modules/ngx-flash-messages/lib-dist/flash-messages.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_profile_service__ = __webpack_require__("./src/app/services/profile.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1076,20 +702,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-// Lab
-
 var ChatComponent = /** @class */ (function () {
-    // hellman
-    // initialComplexNumber: InitialComplexNumber;
-    // personalComplexNumber: PersonalComplexNumber;
-    function ChatComponent(chatService, flashMessagesService, profileService, router) {
-        this.chatService = chatService;
+    function ChatComponent(flashMessagesService, profileService, router) {
         this.flashMessagesService = flashMessagesService;
         this.profileService = profileService;
         this.router = router;
         this.disabledBtn = false;
-        this.DESKey = 'key';
     }
     ChatComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1105,14 +723,9 @@ var ChatComponent = /** @class */ (function () {
             this.product = JSON.parse(localStorage.getItem('product'));
             this.productURL = localStorage.getItem('productUrl');
             this.connectedTime = new Date(Date.now());
-            // // hellman
-            // const hellman = new Hellman();
-            // this.initialComplexNumber = hellman.generateInitialNumbers();
-            // this.personalComplexNumber = hellman.generatePersonalKeys(this.initialComplexNumber);
         }
-        // this.socket = SocketIO('http://localhost:4000');
+        // this.socket = SocketIO('http://localhost:8000');
         this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__["connect"]();
-        // this.socket = SocketIO('https://obscure-stream-46512.herokuapp.com');
         if (this.socket === undefined) {
             console.log('socket connection error');
         }
@@ -1120,8 +733,11 @@ var ChatComponent = /** @class */ (function () {
             console.log('socket connected');
             this.socket.emit('room', {
                 data: {
-                    room: this.room, type: this.userType,
-                    user: this.user.username, time: this.connectedTime
+                    room: this.room,
+                    type: this.userType,
+                    user: this.user.username,
+                    time: this.connectedTime,
+                    product: this.product === undefined ? null : this.product
                 }
             });
             this.socket.on('output', function (data) {
@@ -1130,7 +746,6 @@ var ChatComponent = /** @class */ (function () {
                     if (_this.chatData.length > 4) {
                         _this.chatData = _this.chatData.slice(_this.chatData.length - 4, _this.chatData.length);
                     }
-                    // this.DESDecrypt();
                 }
             });
             this.socket.on('customerOutput', function (data) {
@@ -1139,7 +754,6 @@ var ChatComponent = /** @class */ (function () {
                     if (_this.chatData.length > 4) {
                         _this.chatData = _this.chatData.slice(_this.chatData.length - 4, _this.chatData.length);
                     }
-                    // this.DESDecrypt();
                 }
             });
             this.socket.on('customerConnected', function (time) {
@@ -1153,6 +767,11 @@ var ChatComponent = /** @class */ (function () {
                 });
                 _this.connectedTime = time;
             });
+            this.socket.on('currentProduct', function (product) {
+                if (_this.userType === 'consultant') {
+                    _this.product = product;
+                }
+            });
             this.socket.on('customerDisconnected', function () {
                 var tempConsultant = _this.user;
                 tempConsultant.available = true;
@@ -1162,60 +781,13 @@ var ChatComponent = /** @class */ (function () {
                         _this.flashMessagesService.show(data.msg, { classes: ['alert', 'alert-danger'], timeout: 2000 });
                     }
                 });
+                if (_this.userType === 'consultant') {
+                    _this.product = undefined;
+                }
             });
-            // hellman
-            // if (this.userType === 'customer') {
-            //   this.socket.emit('hellmanInitializeCustomerData', {
-            //     initialComplexNumber: this.initialComplexNumber,
-            //     publicKey: this.personalComplexNumber.publicNum,
-            //     room: this.room
-            //   });
-            // }
-            // this.socket.on('receiveFromCustomer', (data) => {
-            //   if (this.userType === 'consultant') {
-            //     const hellman = new Hellman();
-            //     this.initialComplexNumber = data.initialComplexNumber;
-            //     this.personalComplexNumber = hellman.generatePersonalKeys(this.initialComplexNumber);
-            //     this.DESKey = hellman.calculateResultKey(
-            //       this.initialComplexNumber,
-            //       this.personalComplexNumber.privateNum,
-            //       data.publicKey
-            //     ).toString();
-            //     console.log(this.DESKey);
-            //
-            //     this.socket.emit('hellmanInitializeConsultantData', {
-            //       publicKey: this.personalComplexNumber.publicNum,
-            //       room: this.room
-            //     });
-            //   }
-            // });
-            //
-            // this.socket.on('receiveFromConsultant', (data) => {
-            //   if (this.userType === 'customer') {
-            //     const hellman = new Hellman();
-            //     this.DESKey = hellman.calculateResultKey(
-            //       this.initialComplexNumber,
-            //       this.personalComplexNumber.privateNum,
-            //       data.publicKey
-            //     ).toString();
-            //   }
-            // });
         }
     };
     ChatComponent.prototype.SendMessage = function () {
-        // console.log('-----hellman------');
-        // console.log('initial numbers: ');
-        // console.log(this.initialComplexNumber);
-        // console.log('personal numbers: ');
-        // console.log(this.personalComplexNumber);
-        // console.log('result key: ');
-        // console.log(this.DESKey);
-        // const des = new Des();
-        // console.log('------des------');
-        // console.log('initial: ' + this.message);
-        // this.message = des.Encrypt(this.message, this.DESKey);
-        // console.log('encrypted: ' + this.message);
-        // console.log('key: ' + this.DESKey);
         this.socket.emit('input', {
             chat: new __WEBPACK_IMPORTED_MODULE_2__classes_chat__["a" /* Chat */](this.user.username, this.message, this.room, this.user.profileImg, 'private', Date.now(), false),
             time: this.connectedTime === undefined ? null : this.connectedTime,
@@ -1241,24 +813,7 @@ var ChatComponent = /** @class */ (function () {
     ChatComponent.prototype.EndConsultation = function () {
         this.socket.emit('disconnectedMessage', { user: this.user.username, room: this.room });
         this.socket.close({ user: this.user.username });
-        console.log('ended');
         this.router.navigate(['order', this.product._id]);
-    };
-    ChatComponent.prototype.DESDecrypt = function () {
-        var des = new __WEBPACK_IMPORTED_MODULE_7__classes_des__["a" /* Des */]();
-        for (var _i = 0, _a = this.chatData; _i < _a.length; _i++) {
-            var i = _a[_i];
-            var isBinary = true;
-            for (var j = 0; j < i.message.length; j++) {
-                if (i.message[j] !== '0' && i.message[j] !== '1') {
-                    isBinary = false;
-                    break;
-                }
-            }
-            if (isBinary) {
-                i.message = des.Decrypt(i.message, this.DESKey);
-            }
-        }
     };
     ChatComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1266,86 +821,9 @@ var ChatComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/components/chat-components/chat/chat.component.html"),
             styles: [__webpack_require__("./src/app/components/chat-components/chat/chat.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_chat_service__["a" /* ChatService */], __WEBPACK_IMPORTED_MODULE_4_ngx_flash_messages__["b" /* FlashMessagesService */],
-            __WEBPACK_IMPORTED_MODULE_5__services_profile_service__["a" /* ProfileService */], __WEBPACK_IMPORTED_MODULE_6__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ngx_flash_messages__["b" /* FlashMessagesService */], __WEBPACK_IMPORTED_MODULE_4__services_profile_service__["a" /* ProfileService */], __WEBPACK_IMPORTED_MODULE_5__angular_router__["a" /* Router */]])
     ], ChatComponent);
     return ChatComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/chat-components/forum/forum.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container col-md-6\">\n  <form (submit)=\"SendMessage()\" class=\"form-horizontal\">\n    <div class=\"wrapper\">\n      <div class=\"message\" *ngFor=\"let chat of chatData\">\n        <div class=\"row\">\n          <div class=\"row-md-3\">\n            <img src={{chat.profileImg}} style=\"width: 50px; margin-right:  20px ;\">\n          </div>\n          <div class=\"row-md-8\">\n            <h5>{{chat.user}}{{type === 'consultant' ? '(consultant)' : ''}}</h5>\n            <p>{{chat.message}}</p>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"input-group\">\n      <input class=\" form-control inputMessage\" type=\"text\" [(ngModel)]=\"message\" name=\"message\"\n             i18n-placeholder=\"@@forumMessagePlaceholder\" placeholder=\"Message\">\n      <span class=\"input-group-btn\">\n        <input type=\"submit\" class=\"btn btn-primary center-block\"\n               i18n-value=\"@@forumBtnSendValue\" value=\"Send\">\n      </span>\n    </div>\n  </form>\n\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/components/chat-components/forum/forum.component.scss":
-/***/ (function(module, exports) {
-
-module.exports = ".wrapper {\n  border: 2px solid #cacaca;\n  position: relative;\n  margin: 20px 0 0 0;\n  width: 100%;\n  min-height: 450px;\n  display: inline-block;\n  background: #f8f1ff;\n  border-radius: 15px; }\n\n.message {\n  padding: 30px;\n  background: #d6eeff;\n  margin-bottom: 10px; }\n\n.inputMessage {\n  border: 2px solid #cacaca;\n  border-radius: 15px; }\n"
-
-/***/ }),
-
-/***/ "./src/app/components/chat-components/forum/forum.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForumComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client__ = __webpack_require__("./node_modules/socket.io-client/lib/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_socket_io_client___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_socket_io_client__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var ForumComponent = /** @class */ (function () {
-    function ForumComponent() {
-        this.chatData = [];
-    }
-    ForumComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.user = JSON.parse(localStorage.getItem('user'));
-        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__('http://localhost:4000');
-        if (this.socket === undefined) {
-            console.log('socket connection error');
-        }
-        console.log('socket connected');
-        this.socket.on('output', function (data) {
-            console.log(data);
-            _this.data = data;
-        });
-    };
-    ForumComponent.prototype.SendMessage = function () {
-        this.socket.emit('input', {
-            chat: {
-                user: this.user.username === undefined ? this.user.title : this.user.username,
-                message: this.message,
-                profileImg: this.user.profileImg,
-                type: localStorage.getItem('type')
-            }
-        });
-        this.message = '';
-    };
-    ForumComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-forum',
-            template: __webpack_require__("./src/app/components/chat-components/forum/forum.component.html"),
-            styles: [__webpack_require__("./src/app/components/chat-components/forum/forum.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ForumComponent);
-    return ForumComponent;
 }());
 
 
@@ -1511,7 +989,7 @@ var CompanyRegistrationComponent = /** @class */ (function () {
 /***/ "./src/app/components/common-components/consultant-registration/consultant-registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading \" style=\"color: #686868\"\n              i18n=\"@@consultantRegistrationTitle\">Consultant registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantNamePlaceholder\" placeholder=\"Name\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantUsernamePlaceholder\" placeholder=\"Username\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantEmailPlaceholder\" placeholder=\"E-mail\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"languages\" name=\"languages\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantLanguagePlaceholder\" placeholder=\"What languages do you now or prefer?\">\n        </div>\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"certificate\" name=\"certificate\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCertificatePlaceholder\" placeholder=\"Certificates (with serial number)\">\n            </div>\n          </div>\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantAgePlaceholder\" placeholder=\"Age\">\n            </div>\n          </div>\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"card\" name=\"card\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCardPlaceholder\" placeholder=\"Card\">\n            </div>\n          </div>\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantPhonePlaceholder\" placeholder=\"Phone\">\n\n            </div>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <select class=\"form-control\" #curCategoty (change)=\"changeCurrentCategory(curCategoty.value)\">\n            <option i18n=\"@@consultantCategory\">Choose preferable category</option>\n            <option *ngFor=\"let category of categories\" [value]=\"category\">{{category}}</option>\n          </select>\n        </div>\n\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantPasswordPlaceholder\" placeholder=\"Password\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@consultantRegisterButton\" >Register</button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@consultantCustomerQuestion\">Are you a customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@consultantCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@consultantLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
+module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading \" style=\"color: #686868\"\n              i18n=\"@@consultantRegistrationTitle\">Consultant registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantNamePlaceholder\" placeholder=\"Name\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantUsernamePlaceholder\" placeholder=\"Username (will be used while login)\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantEmailPlaceholder\" placeholder=\"E-mail\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"languages\" name=\"languages\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantLanguagePlaceholder\" placeholder=\"What languages do you now or prefer?\">\n        </div>\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"certificate\" name=\"certificate\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCertificatePlaceholder\" placeholder=\"Certificates (with serial number)\">\n            </div>\n          </div>\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantAgePlaceholder\" placeholder=\"Age\">\n            </div>\n          </div>\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"card\" name=\"card\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCardPlaceholder\" placeholder=\"Card\">\n            </div>\n          </div>\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantPhonePlaceholder\" placeholder=\"Phone\">\n\n            </div>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <select class=\"form-control\" #curCategoty (change)=\"changeCurrentCategory(curCategoty.value)\">\n            <option i18n=\"@@consultantCategory\">Choose preferable category</option>\n            <option *ngFor=\"let category of categories\" [value]=\"category\">{{category}}</option>\n          </select>\n        </div>\n\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantPasswordPlaceholder\" placeholder=\"Password\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@consultantRegisterButton\" >Register</button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@consultantCustomerQuestion\">Are you a customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@consultantCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@consultantLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
 
 /***/ }),
 
@@ -1591,7 +1069,7 @@ var ConsultantRegistrationComponent = /** @class */ (function () {
 /***/ "./src/app/components/common-components/customer-registration/customer-registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@customerRegistrationTitle\">Customer registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerNamePlaceholder\" placeholder=\"Name\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerUsernamePlaceholder\" placeholder=\"Username\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerEmailPlaceholder\" placeholder=\"E-mail\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerAgePlaceholder\" placeholder=\"Age\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerPasswordPlaceholder\" placeholder=\"Password\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@customerRegisterButton\">Register\n          </button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@customerConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@customerCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@customerLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
+module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@customerRegistrationTitle\">Customer registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerNamePlaceholder\" placeholder=\"Name\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerUsernamePlaceholder\" placeholder=\"Username (will be used while login)\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerEmailPlaceholder\" placeholder=\"E-mail\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerAgePlaceholder\" placeholder=\"Age\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerPasswordPlaceholder\" placeholder=\"Password\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@customerRegisterButton\">Register\n          </button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@customerConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@customerCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@customerLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
 
 /***/ }),
 
@@ -2498,14 +1976,14 @@ var OrderComponent = /** @class */ (function () {
 /***/ "./src/app/components/product-components/product-view/product-view.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-2\">\n        <div class=\"backBtnWrapper\">\n          <button class=\"btnBackward\" type=\"button\" (click)=\"catalogRouter()\"></button>\n        </div>\n      </div>\n      <div class=\"col-md-8\">\n\n\n        <div class=\"productWrapper\">\n          <h2 style=\"text-align: center\">{{product.title}}</h2>\n          <hr>\n          <div class=\"row\">\n            <div class=\"col-md-3\">\n              <input [(ngModel)]=\"image\" class=\"{{disabledEdit === true ? 'imgEditViewMode' : 'imgEditChangeMode'}}\"\n                     [disabled]=\"disabledEdit\" placeholder=\"New image url\">\n              <img src={{product.image}} style=\"width: 100%;\">\n              <div class=\"row\">\n                <div class=\"col-md-6\">\n                  <button *ngIf=\"type === 'company' && product.company === user.title\"\n                          class=\"{{disabledEdit === true ? 'profileButton editButton' : 'profileButton applyButton'}}\"\n                          (click)=\"changeMode()\"></button>\n                </div>\n                <div class=\"col-md-6\">\n                  <button *ngIf=\"type === 'company' && product.company === user.title\"\n                          class=\"profileButton rightButton deleteButton\" (click)=\"deleteProduct()\"></button>\n                </div>\n              </div>\n            </div>\n\n            <div class=\"col-md-9\">\n              <div class=\"row\">\n                <div class=\"col-md-1\"></div>\n                <div class=\"col-md-5\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewCategoryValue\" value=\"Category:\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewPriceValue\" value=\"Price ($):\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewQuantityValue\" value=\"Quantity:\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewCompanyValue\" value=\"Company:\">\n                </div>\n                <div class=\"col-md-5\">\n                  <input class=\"attribute\" disabled value=\"{{product.category}}\">\n                  <input class=\"{{attrClass}}\" [(ngModel)]=\"price\" [disabled]=\"disabledEdit\">\n                  <input class=\"{{attrClass}}\" [(ngModel)]=\"quantity\" [disabled]=\"disabledEdit\">\n                  <input class=\"attribute\" disabled value=\"{{product.company}}\">\n                </div>\n              </div>\n\n              <hr>\n              <h4 style=\"text-align: center\" i18n=\"@@productViewSpecification\">Specification:</h4>\n              <div *ngFor=\"let item of product.specification\">\n                <input style=\"text-align: center\" class=\"attribute\" disabled value=\"{{item.name}}: {{item.value}}\">\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"type === 'customer'\">\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <button class=\"btn btn-lg btn-success\" (click)=\"orderProduct()\"\n                        i18n=\"@@productViewOrderBtn\">Order\n                </button>\n              </div>\n              <div class=\"col-md-6\">\n                <button class=\"btn btn-lg btn-primary float-lg-right\" (click)=\"getConsultation()\"\n                        i18n=\"@@productViewConsultBtn\">Get consultation\n                </button>\n              </div>\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n"
+module.exports = "<div *ngIf=\"user\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-md-2\">\n        <div class=\"backBtnWrapper\">\n          <button class=\"btnBackward\" type=\"button\" (click)=\"catalogRouter()\"></button>\n        </div>\n      </div>\n      <div class=\"col-md-8\">\n\n\n        <div class=\"productWrapper\">\n          <h2 style=\"text-align: center\">{{product.title}}</h2>\n          <hr>\n          <div class=\"row\">\n            <div class=\"col-md-3\">\n              <input [(ngModel)]=\"image\" class=\"{{disabledEdit === true ? 'imgEditViewMode' : 'imgEditChangeMode'}}\"\n                     [disabled]=\"disabledEdit\" placeholder=\"New image url\">\n              <img src={{product.image}} style=\"width: 100%;\">\n              <div class=\"row\">\n                <div class=\"col-md-6\">\n                  <button *ngIf=\"type !== 'company'\" class=\"profileButton btnCopy\" ngxClipboard [cbContent]=\"productURL\"></button>\n                  <button *ngIf=\"type === 'company' && product.company === user.title\"\n                          class=\"{{disabledEdit === true ? 'profileButton editButton' : 'profileButton applyButton'}}\"\n                          (click)=\"changeMode()\"></button>\n                </div>\n                <div class=\"col-md-6\">\n                  <button *ngIf=\"type === 'company' && product.company === user.title\"\n                          class=\"profileButton rightButton deleteButton\" (click)=\"deleteProduct()\"></button>\n                </div>\n              </div>\n\n            </div>\n\n            <div class=\"col-md-9\">\n              <div class=\"row\">\n                <div class=\"col-md-1\"></div>\n                <div class=\"col-md-5\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewCategoryValue\" value=\"Category:\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewPriceValue\" value=\"Price ($):\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewQuantityValue\" value=\"Quantity:\">\n                  <input class=\"attrName\" disabled i18n-value=\"@@productViewCompanyValue\" value=\"Company:\">\n                </div>\n                <div class=\"col-md-5\">\n                  <input class=\"attribute\" disabled value=\"{{product.category}}\">\n                  <input class=\"{{attrClass}}\" [(ngModel)]=\"price\" [disabled]=\"disabledEdit\">\n                  <input class=\"{{attrClass}}\" [(ngModel)]=\"quantity\" [disabled]=\"disabledEdit\">\n                  <input class=\"attribute\" disabled value=\"{{product.company}}\">\n                </div>\n              </div>\n              <hr>\n              <h4 style=\"text-align: center\" i18n=\"@@productViewSpecification\">Specification:</h4>\n              <div *ngFor=\"let item of product.specification\">\n                <input style=\"text-align: center\" class=\"attribute\" disabled value=\"{{item.name}}: {{item.value}}\">\n              </div>\n            </div>\n          </div>\n          <div *ngIf=\"type === 'customer'\">\n            <hr>\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <button class=\"btn btn-lg btn-success\" (click)=\"orderProduct()\"\n                        i18n=\"@@productViewOrderBtn\">Order\n                </button>\n              </div>\n              <div class=\"col-md-6\">\n                <button class=\"btn btn-lg btn-primary float-lg-right\" (click)=\"getConsultation()\"\n                        i18n=\"@@productViewConsultBtn\">Get consultation\n                </button>\n              </div>\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>\n\n"
 
 /***/ }),
 
 /***/ "./src/app/components/product-components/product-view/product-view.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".productWrapper {\n  background: #f8f1ff;\n  margin: 30px;\n  padding: 30px;\n  border-radius: 15px;\n  border: 2px solid #cacaca;\n  font-style: italic; }\n\n.profileButton {\n  width: 30px;\n  height: 30px;\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  background-size: 100%;\n  background-size: 30px auto;\n  background-repeat: no-repeat; }\n\n.editButton {\n  background-image: url('edit.bd4011c6899ecb4d6aa6.png'); }\n\n.applyButton {\n  background-image: url('apply.ce18d4665f378af2a272.png'); }\n\n.deleteButton {\n  background-image: url('delete.dd74c7240918f9474579.png'); }\n\n.addButton {\n  background-image: url('add.949bd6415b930ce1ae12.png'); }\n\n.rightButton {\n  margin-left: 70%; }\n\n.attribute {\n  color: #010206;\n  border: 1px solid transparent;\n  background: transparent;\n  font-style: italic;\n  font-size: 1.3em;\n  width: 100%; }\n\n.attributeEditor {\n  color: #102da3;\n  border: 1px solid #888ffd;\n  background: transparent;\n  font-style: italic;\n  font-size: 1.3em;\n  font-family: Arial;\n  width: 100%; }\n\n.attrName {\n  color: #1f1f1f;\n  border: 1px solid transparent;\n  background: transparent;\n  font-weight: bold;\n  font-style: italic;\n  font-size: 1.3em; }\n\n.imgEditViewMode {\n  color: #102da3;\n  border: 1px solid #89fd56;\n  background: transparent;\n  visibility: hidden;\n  font-style: italic;\n  font-size: 1.3em;\n  width: 100%; }\n\n.imgEditChangeMode {\n  color: #102da3;\n  border: 1px solid #89fd56;\n  visibility: visible;\n  background: transparent;\n  font-style: italic;\n  font-size: 1.3em;\n  width: 100%; }\n\n.btnBackward {\n  width: 60px;\n  height: 60px;\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  background-size: 100%;\n  background-size: 60px auto;\n  background-repeat: no-repeat;\n  background-image: url('backward.ec45a0db889b20a43657.png'); }\n\n.backBtnWrapper {\n  margin: 20px; }\n"
+module.exports = ".productWrapper {\n  background: #f8f1ff;\n  margin: 30px;\n  padding: 30px;\n  border-radius: 15px;\n  border: 2px solid #cacaca;\n  font-style: italic; }\n\n.profileButton {\n  width: 30px;\n  height: 30px;\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  background-size: 100%;\n  background-size: 30px auto;\n  background-repeat: no-repeat; }\n\n.editButton {\n  background-image: url('edit.bd4011c6899ecb4d6aa6.png'); }\n\n.applyButton {\n  background-image: url('apply.ce18d4665f378af2a272.png'); }\n\n.deleteButton {\n  background-image: url('delete.dd74c7240918f9474579.png'); }\n\n.addButton {\n  background-image: url('add.949bd6415b930ce1ae12.png'); }\n\n.rightButton {\n  margin-left: 70%; }\n\n.attribute {\n  color: #010206;\n  border: 1px solid transparent;\n  background: transparent;\n  font-style: italic;\n  font-size: 1.3em;\n  width: 100%; }\n\n.attributeEditor {\n  color: #102da3;\n  border: 1px solid #888ffd;\n  background: transparent;\n  font-style: italic;\n  font-size: 1.3em;\n  font-family: Arial;\n  width: 100%; }\n\n.attrName {\n  color: #1f1f1f;\n  border: 1px solid transparent;\n  background: transparent;\n  font-weight: bold;\n  font-style: italic;\n  font-size: 1.3em; }\n\n.imgEditViewMode {\n  color: #102da3;\n  border: 1px solid #89fd56;\n  background: transparent;\n  visibility: hidden;\n  font-style: italic;\n  font-size: 1.3em;\n  width: 100%; }\n\n.imgEditChangeMode {\n  color: #102da3;\n  border: 1px solid #89fd56;\n  visibility: visible;\n  background: transparent;\n  font-style: italic;\n  font-size: 1.3em;\n  width: 100%; }\n\n.btnBackward {\n  width: 60px;\n  height: 60px;\n  background: transparent;\n  border: none;\n  cursor: pointer;\n  background-size: 100%;\n  background-size: 60px auto;\n  background-repeat: no-repeat;\n  background-image: url('backward.ec45a0db889b20a43657.png'); }\n\n.backBtnWrapper {\n  margin: 20px; }\n\n.btnCopy {\n  margin-top: 5px;\n  background-image: url(data:image/png;base64,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); }\n"
 
 /***/ }),
 
@@ -2546,6 +2024,7 @@ var ProductViewComponent = /** @class */ (function () {
         this.price = this.product.price;
         this.quantity = this.product.quantity;
         this.image = this.product.image;
+        this.productURL = localStorage.getItem('productUrl');
     };
     ProductViewComponent.prototype.changeMode = function () {
         var _this = this;
@@ -3107,55 +2586,6 @@ var AuthService = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], AuthService);
     return AuthService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/services/chat.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-// const baseUrl = 'http://localhost:8000/customers/';
-var baseUrl = 'customers/';
-var headers = {
-    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-type': 'application/json' })
-};
-var ChatService = /** @class */ (function () {
-    function ChatService(http) {
-        this.http = http;
-    }
-    ChatService.prototype.createParticularChat = function (customer, consultant, room) {
-        return this.http.post(baseUrl + 'createConversation', {
-            data: {
-                customer: customer,
-                consultant: consultant,
-                room: room
-            }
-        }, headers);
-    };
-    ChatService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
-    ], ChatService);
-    return ChatService;
 }());
 
 
