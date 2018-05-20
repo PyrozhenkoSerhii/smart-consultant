@@ -7,6 +7,7 @@ const chatModule = require('./chat');
 const config = require('./config/database');
 const passport = require('passport');
 const port = process.env.PORT || 8000;
+const Chat = require('./models/chat');
 
 //db connection
 mongoose.connect(config.connectionString, (err) => {
