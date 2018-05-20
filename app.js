@@ -43,6 +43,13 @@ app.get('*',function (req,res) {
     res.sendFile(path.join(__dirname,'./public/index.html'))
 });
 
-app.listen(port, () => {
+// app.listen(port, () => {
+//     console.log('Main server app listening on port ' + port);
+// });
+
+let http = require('http').Server(app);
+
+http.listen(port, () => {
     console.log('Main server app listening on port ' + port);
 });
+
