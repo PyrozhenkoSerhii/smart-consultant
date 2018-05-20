@@ -1210,7 +1210,8 @@ var ChatComponent = /** @class */ (function () {
             this.personalComplexNumber = hellman.generatePersonalKeys(this.initialComplexNumber);
         }
         // this.socket = SocketIO('http://localhost:4000');
-        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__('https://obscure-stream-46512.herokuapp.com/');
+        this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__["connect"]();
+        // this.socket = SocketIO('https://obscure-stream-46512.herokuapp.com');
         if (this.socket === undefined) {
             console.log('socket connection error');
         }
