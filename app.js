@@ -52,4 +52,9 @@ let http = require('http').Server(app);
 http.listen(port, () => {
     console.log('Main server app listening on port ' + port);
 });
+let io = require('socket.io')(http);
+
+io.on('connection', function(socket){
+    console.log('a user connected');
+});
 
