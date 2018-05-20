@@ -918,89 +918,6 @@ var Des = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/classes/hellman.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Hellman; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__initial_complex_number__ = __webpack_require__("./src/app/classes/initial-complex-number.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__personal_complex_number__ = __webpack_require__("./src/app/classes/personal-complex-number.ts");
-
-
-var Hellman = /** @class */ (function () {
-    function Hellman() {
-    }
-    Hellman.generatePrime = function (max) {
-        if (max === void 0) { max = 1000; }
-        var i;
-        var number = Math.floor(Math.random() * (max - 5)) + 5;
-        for (i = 2; i < number; i++) {
-            if (number % i === 0) {
-                number += 1;
-                i = 2;
-            }
-        }
-        return number;
-    };
-    Hellman.customMathPow = function (number, pow, module) {
-        var res = 1;
-        number = number % module;
-        while (pow > 0) {
-            if (pow % 2 !== 0) {
-                res = (res * pow) % module;
-            }
-            pow = pow / 2;
-            number = (number * number) % module;
-        }
-        return res;
-    };
-    Hellman.prototype.isPrimitiveRoot = function (primitiveRoot, primeNumber) {
-        // to do
-        return true;
-    };
-    Hellman.prototype.generateInitialNumbers = function () {
-        var q = Hellman.generatePrime(1000);
-        var a = 5;
-        while (!this.isPrimitiveRoot(a, q)) {
-            a += 2;
-        }
-        return new __WEBPACK_IMPORTED_MODULE_0__initial_complex_number__["a" /* InitialComplexNumber */](17, 3);
-    };
-    Hellman.prototype.generatePersonalKeys = function (initialComplexNumber) {
-        var q = initialComplexNumber.primeNumber;
-        var a = initialComplexNumber.primitiveRoot;
-        var privateKey = Hellman.generatePrime(q);
-        var publicKey = Math.pow(a, privateKey) % q;
-        return new __WEBPACK_IMPORTED_MODULE_1__personal_complex_number__["a" /* PersonalComplexNumber */](privateKey, publicKey);
-    };
-    Hellman.prototype.calculateResultKey = function (initialComplexNumber, personalPrivate, othersPublic) {
-        var q = initialComplexNumber.primeNumber;
-        return Math.pow(othersPublic, personalPrivate) % q;
-    };
-    return Hellman;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/classes/initial-complex-number.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InitialComplexNumber; });
-var InitialComplexNumber = /** @class */ (function () {
-    function InitialComplexNumber(prime, primitive) {
-        this.primeNumber = prime;
-        this.primitiveRoot = primitive;
-    }
-    return InitialComplexNumber;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/classes/order.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1036,23 +953,6 @@ var Pair = /** @class */ (function () {
         this.right = right;
     }
     return Pair;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/classes/personal-complex-number.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PersonalComplexNumber; });
-var PersonalComplexNumber = /** @class */ (function () {
-    function PersonalComplexNumber(privateNum, publicNum) {
-        this.privateNum = privateNum;
-        this.publicNum = publicNum;
-    }
-    return PersonalComplexNumber;
 }());
 
 
@@ -1161,7 +1061,6 @@ module.exports = ".wrapper {\n  border: 2px solid #cacaca;\n  position: relative
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_profile_service__ = __webpack_require__("./src/app/services/profile.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__classes_des__ = __webpack_require__("./src/app/classes/des.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__classes_hellman__ = __webpack_require__("./src/app/classes/hellman.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1180,8 +1079,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 // Lab
 
-
 var ChatComponent = /** @class */ (function () {
+    // hellman
+    // initialComplexNumber: InitialComplexNumber;
+    // personalComplexNumber: PersonalComplexNumber;
     function ChatComponent(chatService, flashMessagesService, profileService, router) {
         this.chatService = chatService;
         this.flashMessagesService = flashMessagesService;
@@ -1204,10 +1105,10 @@ var ChatComponent = /** @class */ (function () {
             this.product = JSON.parse(localStorage.getItem('product'));
             this.productURL = localStorage.getItem('productUrl');
             this.connectedTime = new Date(Date.now());
-            // hellman
-            var hellman = new __WEBPACK_IMPORTED_MODULE_8__classes_hellman__["a" /* Hellman */]();
-            this.initialComplexNumber = hellman.generateInitialNumbers();
-            this.personalComplexNumber = hellman.generatePersonalKeys(this.initialComplexNumber);
+            // // hellman
+            // const hellman = new Hellman();
+            // this.initialComplexNumber = hellman.generateInitialNumbers();
+            // this.personalComplexNumber = hellman.generatePersonalKeys(this.initialComplexNumber);
         }
         // this.socket = SocketIO('http://localhost:4000');
         this.socket = __WEBPACK_IMPORTED_MODULE_1_socket_io_client__["connect"]();
@@ -1229,7 +1130,7 @@ var ChatComponent = /** @class */ (function () {
                     if (_this.chatData.length > 4) {
                         _this.chatData = _this.chatData.slice(_this.chatData.length - 4, _this.chatData.length);
                     }
-                    _this.DESDecrypt();
+                    // this.DESDecrypt();
                 }
             });
             this.socket.on('customerOutput', function (data) {
@@ -1238,7 +1139,7 @@ var ChatComponent = /** @class */ (function () {
                     if (_this.chatData.length > 4) {
                         _this.chatData = _this.chatData.slice(_this.chatData.length - 4, _this.chatData.length);
                     }
-                    _this.DESDecrypt();
+                    // this.DESDecrypt();
                 }
             });
             this.socket.on('customerConnected', function (time) {
@@ -1263,48 +1164,58 @@ var ChatComponent = /** @class */ (function () {
                 });
             });
             // hellman
-            if (this.userType === 'customer') {
-                this.socket.emit('hellmanInitializeCustomerData', {
-                    initialComplexNumber: this.initialComplexNumber,
-                    publicKey: this.personalComplexNumber.publicNum,
-                    room: this.room
-                });
-            }
-            this.socket.on('receiveFromCustomer', function (data) {
-                if (_this.userType === 'consultant') {
-                    var hellman = new __WEBPACK_IMPORTED_MODULE_8__classes_hellman__["a" /* Hellman */]();
-                    _this.initialComplexNumber = data.initialComplexNumber;
-                    _this.personalComplexNumber = hellman.generatePersonalKeys(_this.initialComplexNumber);
-                    _this.DESKey = hellman.calculateResultKey(_this.initialComplexNumber, _this.personalComplexNumber.privateNum, data.publicKey).toString();
-                    console.log(_this.DESKey);
-                    _this.socket.emit('hellmanInitializeConsultantData', {
-                        publicKey: _this.personalComplexNumber.publicNum,
-                        room: _this.room
-                    });
-                }
-            });
-            this.socket.on('receiveFromConsultant', function (data) {
-                if (_this.userType === 'customer') {
-                    var hellman = new __WEBPACK_IMPORTED_MODULE_8__classes_hellman__["a" /* Hellman */]();
-                    _this.DESKey = hellman.calculateResultKey(_this.initialComplexNumber, _this.personalComplexNumber.privateNum, data.publicKey).toString();
-                }
-            });
+            // if (this.userType === 'customer') {
+            //   this.socket.emit('hellmanInitializeCustomerData', {
+            //     initialComplexNumber: this.initialComplexNumber,
+            //     publicKey: this.personalComplexNumber.publicNum,
+            //     room: this.room
+            //   });
+            // }
+            // this.socket.on('receiveFromCustomer', (data) => {
+            //   if (this.userType === 'consultant') {
+            //     const hellman = new Hellman();
+            //     this.initialComplexNumber = data.initialComplexNumber;
+            //     this.personalComplexNumber = hellman.generatePersonalKeys(this.initialComplexNumber);
+            //     this.DESKey = hellman.calculateResultKey(
+            //       this.initialComplexNumber,
+            //       this.personalComplexNumber.privateNum,
+            //       data.publicKey
+            //     ).toString();
+            //     console.log(this.DESKey);
+            //
+            //     this.socket.emit('hellmanInitializeConsultantData', {
+            //       publicKey: this.personalComplexNumber.publicNum,
+            //       room: this.room
+            //     });
+            //   }
+            // });
+            //
+            // this.socket.on('receiveFromConsultant', (data) => {
+            //   if (this.userType === 'customer') {
+            //     const hellman = new Hellman();
+            //     this.DESKey = hellman.calculateResultKey(
+            //       this.initialComplexNumber,
+            //       this.personalComplexNumber.privateNum,
+            //       data.publicKey
+            //     ).toString();
+            //   }
+            // });
         }
     };
     ChatComponent.prototype.SendMessage = function () {
-        console.log('-----hellman------');
-        console.log('initial numbers: ');
-        console.log(this.initialComplexNumber);
-        console.log('personal numbers: ');
-        console.log(this.personalComplexNumber);
-        console.log('result key: ');
-        console.log(this.DESKey);
-        var des = new __WEBPACK_IMPORTED_MODULE_7__classes_des__["a" /* Des */]();
-        console.log('------des------');
-        console.log('initial: ' + this.message);
-        this.message = des.Encrypt(this.message, this.DESKey);
-        console.log('encrypted: ' + this.message);
-        console.log('key: ' + this.DESKey);
+        // console.log('-----hellman------');
+        // console.log('initial numbers: ');
+        // console.log(this.initialComplexNumber);
+        // console.log('personal numbers: ');
+        // console.log(this.personalComplexNumber);
+        // console.log('result key: ');
+        // console.log(this.DESKey);
+        // const des = new Des();
+        // console.log('------des------');
+        // console.log('initial: ' + this.message);
+        // this.message = des.Encrypt(this.message, this.DESKey);
+        // console.log('encrypted: ' + this.message);
+        // console.log('key: ' + this.DESKey);
         this.socket.emit('input', {
             chat: new __WEBPACK_IMPORTED_MODULE_2__classes_chat__["a" /* Chat */](this.user.username, this.message, this.room, this.user.profileImg, 'private', Date.now(), false),
             time: this.connectedTime === undefined ? null : this.connectedTime,
