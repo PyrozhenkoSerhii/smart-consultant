@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const serverSocket = require('socket.io').listen(4000).sockets;
+const serverSocket = require('socket.io').listen(process.env.PORT).sockets;
 const Chat = require('./models/chat');
 const Customer = require('./models/customer');
 const Consultant = require('./models/consultant');
