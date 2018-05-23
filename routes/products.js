@@ -34,6 +34,15 @@ router.post('/getById', (req, res) => {
         }
     })
 });
+router.post('/getSpecificationById', (req, res) => {
+    Product.getById(req.body.id, (err, product) => {
+        if (err) {
+            res.json({success: false, msg: 'Failed to find a product'})
+        } else {
+            res.json({specification: product.specification})
+        }
+    })
+});
 router.post('/getAllByCategory', (req, res) => {
     Product.getAllByCategory(req.body.category, (err, products) => {
         if (err) {
