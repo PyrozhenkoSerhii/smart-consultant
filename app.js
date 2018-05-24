@@ -54,6 +54,7 @@ serverSocket.on('connection', (clientSocket) => {
     console.log('socket connection established');
 
     clientSocket.on('room', (req) => {
+        console.log(req);
         clientSocket.join(req.data.room);
 
         Chat.getAllByRoom(req.data.room, (err, messages) => {
