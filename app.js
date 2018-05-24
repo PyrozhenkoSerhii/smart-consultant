@@ -91,11 +91,6 @@ serverSocket.on('connection', (clientSocket) => {
         });
     });
 
-    clientSocket.on('roomMobile', (req)=>{
-        console.log(req[0]);
-        console.log(req[1]);
-    });
-
     clientSocket.on('input', (data) => {
         let newChat = new Chat(data.chat);
 
