@@ -7,6 +7,7 @@ const config = require('./config/database');
 const passport = require('passport');
 const port = process.env.PORT || 8000;
 const Chat = require('./models/chat');
+const Product = require('./models/product');
 
 //db connection
 mongoose.connect(config.connectionString, (err) => {
@@ -84,10 +85,48 @@ serverSocket.on('connection', (clientSocket) => {
                             })
                         }
                     });
-
+                    Product.getById(req.data.productId)
                     serverSocket.to(req.data.room).emit('currentProduct', req.data.product);
                 }
             }
+        });
+    });
+
+    clientSocket.on('roomMobile', (req) => {
+        console.log(req);
+        clientSocket.join(req.data.room);
+
+        Chat.getAllByRoom(req.data.room, (err, messages) => {
+            if (err) {
+                console.log(err);
+            } else {
+                serverSocket.to(req.data.room).emit('output', messages);
+
+                let serverMessage = new Chat({
+                    user: 'system',
+                    message: req.data.user + ' joined to the room',
+                    profileImg: null,
+                    room: req.data.room,
+                    date: Date.now(),
+                    type: 'private',
+                    isSystemMessage: true
+                });
+
+                Chat.addPrivateMessage(serverMessage, (err, res) => {
+                    if (err) console.log(err);
+                    else {
+                        Chat.getAllByRoom(req.data.room, (err, res) => {
+                            if (err) console.log(err);
+                            serverSocket.to(req.data.room).emit('output', res);
+                            serverSocket.to(req.data.room).emit('customerConnected', req.data.time);
+                        })
+                    }
+                });
+                Product.getById(req.data.productId, (err, product) => {
+                    serverSocket.to(req.data.room).emit('currentProduct', product);
+                });
+            }
+
         });
     });
 
