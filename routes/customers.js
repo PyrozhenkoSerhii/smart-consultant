@@ -73,6 +73,15 @@ router.post('/getByUsername', (req, res) => {
         })
     }
 });
+router.post('/getByUsernameMobile', (req, res) => {
+    Customer.getByUsername(req.body.username, (err, customer) => {
+        if (err) {
+            res.json({success: false, msg: 'Failed to find a customer'})
+        } else {
+            res.json({success: true, msg: 'Customer was found', customer: customer})
+        }
+    })
+});
 router.get('/getAll', (req, res) => {
     Customer.getAll((err, customers) => {
         if (err) {
