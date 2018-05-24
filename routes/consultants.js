@@ -178,6 +178,15 @@ router.post('/changeRate', (req, res) => {
         }
     });
 });
+router.post('/getRate', (req,res)=>{
+    Consultant.getByUsername(req.body.username, (err, consultant) => {
+        if (err) {
+            res.json({success: false, msg: 'Failed to find a consultant'})
+        } else {
+            res.json({success: true, msg: 'Consultant was found', rate: consultant.rate})
+        }
+    })
+});
 
 // availability
 router.post('/changeAvailability', (req, res) => {
