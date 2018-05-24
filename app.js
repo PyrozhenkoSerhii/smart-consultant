@@ -145,6 +145,7 @@ serverSocket.on('connection', (clientSocket) => {
                 console.log('time' + data.time);
                 Chat.getAllByRoomAndTime(data.chat.room, data.time, (err, res) => {
                     if (err) console.log(err);
+                    console.log(res);
                     serverSocket.to(data.chat.room).emit('customerOutput', res);
                 })
             }
