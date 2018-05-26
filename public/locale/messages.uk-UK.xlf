@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="customerRegistrationTitle" datatype="html">
+        <source>Customer registration</source>
+        <target>Реєстрація клієнта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerNamePlaceholder" datatype="html">
+        <source>Name</source>
+        <target>Им'я</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerUsernamePlaceholder" datatype="html">
+         <source>Username (will be userd while login)</source>
+        <target>Им'я користувача (буде використано при вході)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerEmailPlaceholder" datatype="html">
+        <source>E-mail</source>
+        <target>Електронна пошта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerAgePlaceholder" datatype="html">
+        <source>Age</source>
+        <target>Вік</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerPasswordPlaceholder" datatype="html">
+        <source>Password</source>
+        <target>Пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerRegisterButton" datatype="html">
+        <source>Register</source>
+        <target>Зареєструватися</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerConsultantQuestion" datatype="html">
+        <source>Are you a consultant?</source>
+        <target>Ви консультант?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerCompanyQuestion" datatype="html">
+        <source>Are you company manager?</source>
+        <target>Ви менеджер компанії?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerLoginQuestion" datatype="html">
+        <source>Already have an account?</source>
+        <target>Все є акаунт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/customer-registration/customer-registration.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyRegistrationTitle" datatype="html">
+        <source>Company registration</source>
+        <target>Реєстрація компанії</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyTitlePlaceholder" datatype="html">
+        <source>Company title</source>
+        <target>Назва</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyKeyPlaceholder" datatype="html">
+        <source>Key to authenticate</source>
+        <target>Ключ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyPhonePlaceholder" datatype="html">
+        <source>Phone</source>
+        <target>Телефон</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyEmailPlaceholder" datatype="html">
+        <source>Email</source>
+        <target>Електронна пошта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyRequiredCertificatePlaceholder" datatype="html">
+        <source>Required certificate</source>
+        <target>Сертифікати для працеулаштування</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyRegisterButton" datatype="html">
+        <source>Register
+          </source>
+          <target>Зареєструвати</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyConsultantQuestion" datatype="html">
+        <source>Are you a consultant?</source>
+        <target>Ви консультант?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyCustomerQuestion" datatype="html">
+        <source>Are you customer?</source>
+        <target>Ви клієнт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyLoginQuestion" datatype="html">
+        <source>Already have an account?</source>
+        <target>Уже є акаунт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/company-registration/company-registration.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantRegistrationTitle" datatype="html">
+        <source>Consultant registration</source>
+        <target>Реєстрація консультанта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantNamePlaceholder" datatype="html">
+        <source>Name</source>
+        <target>Им'я</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantUsernamePlaceholder" datatype="html">
+         <source>Username (will be used while login)</source>
+        <target>Им'я користувача (буде використано при вході)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantEmailPlaceholder" datatype="html">
+        <source>E-mail</source>
+        <target>Електронна пошта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantLanguagePlaceholder" datatype="html">
+        <source>What languages do you now or prefer?</source>
+        <target>Які мови знаєте?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCertificatePlaceholder" datatype="html">
+        <source>Certificates (with serial number)</source>
+        <target>Сертифікати (с идентификационным номером)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantAgePlaceholder" datatype="html">
+        <source>Age</source>
+        <target>Вік</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCardPlaceholder" datatype="html">
+        <source>Card</source>
+        <target>Банківська картка</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantPhonePlaceholder" datatype="html">
+        <source>Phone</source>
+        <target>Телефон</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCategory" datatype="html">
+        <source>Choose preferable category</source>
+        <target>Оберіть категорію</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantPasswordPlaceholder" datatype="html">
+        <source>Password</source>
+        <target>Пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantRegisterButton" datatype="html">
+        <source>Register</source>
+        <target>Зареєструвати</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCustomerQuestion" datatype="html">
+        <source>Are you a customer?</source>
+        <target>Ви клієнт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCompanyQuestion" datatype="html">
+        <source>Are you company manager?</source>
+        <target>Ви менеджер компанії?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantLoginQuestion" datatype="html">
+        <source>Already have an account?</source>
+        <target>Уже є акаунт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/consultant-registration/consultant-registration.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginTitle" datatype="html">
+        <source>Login</source>
+        <target>Вхід до акаунту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/login/login.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginUsernamePlaceholder" datatype="html">
+        <source>Username</source>
+        <target>Им'я користувача</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/login/login.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginPasswordPlaceholder" datatype="html">
+        <source>Password</source>
+        <target>Пароль</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/login/login.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <target>Увійти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/login/login.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <note priority="1" from="description">@loginButton</note>
+      </trans-unit>
+      <trans-unit id="loginQuestion" datatype="html">
+        <source>Don&apos;t have an account?</source>
+        <target>Відсутній акаунт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/common-components/login/login.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatModalTitle" datatype="html">
+        <source>Whether a consultant was useful?</source>
+        <target>Консультант був корисний?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/ChatRateModal.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatModalContent" datatype="html">
+        <source>Please, rate a consultant</source>
+        <target>Будь ласка, оцініть консультанта</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/ChatRateModal.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatModalBtnSkip" datatype="html">
+        <source>Skip</source>
+        <target>Пропустити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/ChatRateModal.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatModalRate" datatype="html">
+        <source>Rate</source>
+        <target>Оцінити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/ChatRateModal.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatModalEndConsultation" datatype="html">
+        <source>End a consultation</source>
+        <target>Закінчити консультацію</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/ChatRateModal.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatChosenProduct" datatype="html">
+        <source>Chosen product</source>
+        <target>Обраний продукт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/chat/chat.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatConsultantEnding" datatype="html">
+        <source>End Consultation</source>
+        <target>Закінчити консультацію</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/chat/chat.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatMessagePlaceholder" datatype="html">
+        <source>Message</source>
+        <target>Введіть повідомлення</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/chat/chat.component.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chatBtnSend" datatype="html">
+        <source>Send</source>
+        <target>Відправити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/chat/chat.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkProducts" datatype="html">
+        <source>Products</source>
+        <target>Каталог</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkRegister" datatype="html">
+        <source>Register</source>
+        <target>Реєстрація</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkLogin" datatype="html">
+        <source>Login</source>
+        <target>Вхід до акаунту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="linkLogout" datatype="html">
+        <source>Logout</source>
+        <target>Вийти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/navbar/navbar.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeTitleFirst" datatype="html">
+        <source>For whom is our site created?</source>
+        <target>Для кого створено сайт?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeContentFirst" datatype="html">
+        <source>Our platform was created for 3 kind of users. First type are company managers that
+          want to use our service to sell product and hire a consultant. Second is a people that have a knowledge
+          in some scope and want to consult customers during free time. And the last one is common customer that
+          want to get qualify and fast online consultation when he need to.</source>
+          <target>Наша платформа націлена на 3 основних клієнтів. Перший - власник компанії, який
+           хоче використовувати наш серсіс для продажу продукту й найму консультантів. Другий - люди, які 
+           мають хороші знання в будь-якії області й хочуть консультувати людей у свій вільний час.
+            І, нарешті, - третій - звичайні відвідувачі магазинів, які хочуть отримати якісну і швидку
+             консультацію, коли їм потрібно.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeTitleSecond" datatype="html">
+        <source>What do we offer to customers?</source>
+        <target>Що ми пропонуємо нашим відвідувачам?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeContentSecond" datatype="html">
+        <source>Our team think that peoples must get a help only when they want to. Therefore we provide
+          a platform with which you will never wait for consultants when you need to and vice versa, you won&apos;t need to
+        listen them when you don&apos;t want to.</source>
+        <target>Наша команда вважає, що відвідувачі повинні отримувати допомогу лише тоді, коли вони дійсно
+        цього хочуть. Тому ми розробили дану платформу, що дозволить користувачам не очікувати, пока консультант
+        прийде у час, коли він потрібен й, навпаки, не слухати його тоді, коли ви цього не хочете.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeTitleThird" datatype="html">
+        <source>What do we offer to consultants? </source>
+        <target>Що ми пропонуємо нашим консультантам?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeContentThird" datatype="html">
+        <source>You have an excellent knowledge of some scope? You want to help people in free time? So we offer
+        you to register in our platform and you will a free schedule and payment from every product you&apos;ve sold</source>
+        <target>Ви маєте відміні знання у деякій області? Хочете допомагати людям у вільний час? Тоді ми пропонуємо вам
+        зареєструватися на нашій платформі й отримати вільний графік роботи й оплату з продажу кожного товару.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeTitleFourth" datatype="html">
+        <source>What do we offer to companies? </source>
+        <target>Что мы пропонуємо компаніям?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeContentFourth" datatype="html">
+        <source>Sometimes customers complains about company&apos;s consultants which whether don&apos;t know simple things
+        that they must know perfectly or very obtrusive. Furthermore a regular employee should get used to the situation
+          in the store. Therefore we offer you to hire a consultants from our platform and provide products that they
+          can sell and receive part of the profits </source>
+          <target>Іноді відвідувачі скаржаться на компанії через те, що консультанти були або недостатньо компенетні у 
+          сфері, яку вони повинні знати досконально, або через те, що вони дуже наполегливі. Більш за те, штатні працівники
+          повинні пристосуватися до умов магазину й компанії. Тому ми пропонуємо наймати консультатнтів з нашої платформи й 
+          надавати товари, які вони зможуть продавати й отримувати частину їх вартості.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homeRefBack" datatype="html">
+        <source>Back to top</source>
+        <target>Уверх</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="homePrivacy" datatype="html">
+        <source> 2018 Serhii Pyrozhenko, Nure.</source>
+        <target>2018 Пироженко Сергій, ХНУРЕ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/home/home.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="categoriesValue" datatype="html">
+        <source>Categories</source>
+        <target>Категорії</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogAllValue" datatype="html">
+        <source>All</source>
+        <target>Усі товари</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogTVValue" datatype="html">
+        <source>TV</source>
+        <target>Телевізори</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogPCValue" datatype="html">
+        <source>Personal computers</source>
+        <target>Персональні комп'ютери</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogMonitorsValue" datatype="html">
+        <source>Monitors</source>
+        <target>Монітори</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogComponentsValue" datatype="html">
+        <source>PC components</source>
+        <target>Компоненти ПК</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogLaptopsValue" datatype="html">
+        <source>Laptops</source>
+        <target>Ноутбуки</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogSmartphonesValue" datatype="html">
+        <source>Smartphones</source>
+        <target>Мобільні телефони</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogFindByCompany" datatype="html">
+        <source>Find by company</source>
+        <target>Знайти за компанією</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogCompanyTitlePlaceholder" datatype="html">
+        <source>Company title</source>
+        <target>Назва компанії</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="catalogCreateProductValue" datatype="html">
+        <source>Create product</source>
+        <target>Створити продукт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/catalog/catalog.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="userGreetings" datatype="html">
+        <source>Hello,</source>
+        <target>Вітаю, </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerImagePlaceholder" datatype="html">
+        <source>New image url</source>
+        <target>Нове посилання</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerNameValue" datatype="html">
+        <source>Name:</source>
+        <target>Им'я:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerUsernameValue" datatype="html">
+        <source>Username:</source>
+        <target>Псевдонім:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerEmailValue" datatype="html">
+        <source>Email:</source>
+        <target>Пошта:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerAgeValue" datatype="html">
+        <source>Age:</source>
+        <target>Вік:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customerPurchases" datatype="html">
+        <source>Last purchases:</source>
+        <target>Останні покупки:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="purchaseProduct" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Product:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Продукт:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="purchaseConsultant" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Consultant:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Консультант:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="purchaseDate" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Date:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </source>
+         <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Дата:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantImagePlaceholder" datatype="html">
+        <source>New image url</source>
+        <target>Нове посилання</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantnameValue" datatype="html">
+        <source>Name:</source>
+        <target>Им'я:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantUsernameValue" datatype="html">
+        <source>Username:</source>
+        <target>Псевдонім:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantEmailValue" datatype="html">
+        <source>Email:</source>
+        <target>Пошта:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantAgeValue" datatype="html">
+        <source>Age:</source>
+        <target>Вік:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">104</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantPhoneValue" datatype="html">
+        <source>Phone:</source>
+        <target>Телефон:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantLanguagesValue" datatype="html">
+        <source>Languages:</source>
+        <target>Мови:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCardValue" datatype="html">
+        <source>Card:</source>
+        <target>Карта:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantRateValue" datatype="html">
+        <source>Rate:</source>
+        <target>Рейтинг:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCategoryValue" datatype="html">
+        <source>Category:</source>
+        <target>Категорія:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCertificateValue" datatype="html">
+        <source>Certificate:</source>
+        <target>Сертифікати:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantCompanyValue" datatype="html">
+        <source>Company:</source>
+        <target>Компанія:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantActive" datatype="html">
+        <source>Active</source>
+        <target>Доступний:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="disposalsConsultant" datatype="html">
+        <source>Last disposals</source>
+        <target>Останонній збут</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="disposalProduct" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Product:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Продукт:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="disposalCustomer" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Customer:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Клієнт:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="disposalDate" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Date:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Дата:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyImagePlaceholder" datatype="html">
+        <source>New image url</source>
+        <target>Нове посилання</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyTitleValue" datatype="html">
+        <source>Title:</source>
+        <target>Назва:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyEmailValue" datatype="html">
+        <source>Email:</source>
+        <target>Пошта:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">195</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyPhoneValue" datatype="html">
+        <source>Phone:</source>
+        <target>Телефон:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="companyRequirementsValue" datatype="html">
+        <source>Requirements:</source>
+        <target>Вимоги:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goToProductValue" datatype="html">
+        <source>Go to products</source>
+        <target>До каталогу:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="consultantRequests" datatype="html">
+        <source>Consultant request:</source>
+        <target>Запроси консультантів:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">216</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestName" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Name:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Им'я:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">225</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestCertificate" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Certificate:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Сертифікат:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">231</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="requestAge" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Age:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Вік:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">237</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workingConsultants" datatype="html">
+        <source>Working consultants:</source>
+        <target>Працюючі консультанти:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workingConsultantName" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Name:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Им'я:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">264</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="workingConsultantSince" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Working since:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Працює з:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/profile/profile.component.ts</context>
+          <context context-type="linenumber">270</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forumMessagePlaceholder" datatype="html">
+        <source>Message</source>
+        <target>Введіть повідомлення</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/forum/forum.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forumBtnSendValue" datatype="html">
+        <source>Send</source>
+        <target>Відправити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/forum/forum.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationLabel" datatype="html">
+        <source>Product creation</source>
+        <target>Додавання продукту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationTitlePlaceholder" datatype="html">
+        <source>Product title</source>
+        <target>Назва продукту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationCategory" datatype="html">
+        <source>Choose category</source>
+        <target>Оберіть категорію</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationPricePlaceholder" datatype="html">
+        <source>Price</source>
+        <target>Ціна</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationQuantityPlaceholder" datatype="html">
+        <source>Quantity</source>
+        <target>Кількість</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationImagePlaceholder" datatype="html">
+        <source>Image URL</source>
+        <target>Посилання на зображення</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationSpecification" datatype="html">
+        <source>Specification</source>
+        <target>Специфікация</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationSpecNamePlaceholder" datatype="html">
+        <source>Name</source>
+        <target>Назва</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationSpecValuePlaceholder" datatype="html">
+        <source>Value</source>
+        <target>Значення</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationSpecAdded" datatype="html">
+        <source>Added</source>
+        <target>Додано</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productCreationBtnCreate" datatype="html">
+        <source> Create </source>
+        <target>Створити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/creation/creation.component.ts</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewCategoryValue" datatype="html">
+        <source>Category:</source>
+        <target>Категорія:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewPriceValue" datatype="html">
+        <source>Price ($):</source>
+        <target>Ціна ($):</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewQuantityValue" datatype="html">
+        <source>Quantity:</source>
+        <target>Кількість:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewCompanyValue" datatype="html">
+        <source>Company:</source>
+        <target>Компанія:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewSpecification" datatype="html">
+        <source>Specification:</source>
+        <target>Специфікация:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewOrderBtn" datatype="html">
+        <source>Order</source>
+        <target>Замовити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productViewConsultBtn" datatype="html">
+        <source>Get consultation</source>
+        <target>Проконсультуватися</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/product-view/product-view.component.ts</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectorTitle" datatype="html">
+        <source>Available consultants</source>
+        <target>Доступні консультанти</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/selector/selector.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectorUsername" datatype="html">
+        <source>Username: </source>
+        <target>Им'я користувача:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/selector/selector.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectorLanguages" datatype="html">
+        <source> Languages: </source>
+        <target>Мови:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/selector/selector.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectorSales" datatype="html">
+        <source> Sales:  </source>
+        <target>Продажі:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/chat-components/selector/selector.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderModalTitle" datatype="html">
+        <source>The order was created</source>
+        <target>Замолення було виконано</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/OrderModal.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderModalContent" datatype="html">
+        <source>We will call you back soon and update the affirm the order.</source>
+        <target>Ми вам зателефонуємо й підтвердимо деталі замовлення</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/OrderModal.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderModalBtnNav" datatype="html">
+        <source>Go to home page</source>
+        <target>Домашняя сторінка</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/OrderModal.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderModalBtnOrder" datatype="html">
+        <source>Order</source>
+        <target>Замовити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/modals/OrderModal.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderInfoTitle" datatype="html">
+        <source>Order info</source>
+        <target>Информація про замовлення</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderCustomerLabel" datatype="html">
+        <source>Customer</source>
+        <target>Клієнт</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderCustomerUsername" datatype="html">
+        <source>Username: </source>
+        <target>Им'я користувача:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderCustomerEmail" datatype="html">
+        <source>Email:  </source>
+        <target>Пошта:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderConsultantLabel" datatype="html">
+        <source>Consultant</source>
+        <target>Консультант</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderConsultantUsername" datatype="html">
+        <source>Username:  </source>
+        <target>Им'я користувача:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderConsultantEmail" datatype="html">
+        <source>Email:  </source>
+        <target>Пошта:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderConsultantPhone" datatype="html">
+        <source>Phone:  </source>
+        <target>Телефон:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderProductLabel" datatype="html">
+        <source>Product</source>
+        <target>Товар</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderProductTitle" datatype="html">
+        <source>Title:  </source>
+        <target>Назва: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderProductPrice" datatype="html">
+        <source>Price: </source>
+        <target>Ціна:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderProductCompany" datatype="html">
+        <source>Company: </source>
+        <target>Компанія:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderDeliveryInfoTitle" datatype="html">
+        <source>Delivery info</source>
+        <target>Информація про доствку</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderContactData" datatype="html">
+        <source>Contact data</source>
+        <target>Контактна інформація</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderContactCountryPlaceholder" datatype="html">
+        <source>Country</source>
+        <target>Країна</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderContactTownPlaceholder" datatype="html">
+        <source>Town</source>
+        <target>Місто</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderContactAddressPlaceholder" datatype="html">
+        <source>Address</source>
+        <target>Адреса</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderContactPhonePlaceholder" datatype="html">
+        <source>Contact phone</source>
+        <target>Телефон</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderTransportationTitle" datatype="html">
+        <source>Transportation</source>
+        <target>Транспортування</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderTransportationCourier" datatype="html">
+        <source>Courier delivery</source>
+        <target>Доставка кур'єром</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderTransportationPostOffice" datatype="html">
+        <source>Post office delivery</source>
+        <target>Доставка через пошту</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderTransportationPickup" datatype="html">
+        <source>Pick up from stock</source>
+        <target>Забрати зі складу</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderPaymentCash" datatype="html">
+        <source>Cash payment</source>
+        <target>Оплата готівкою</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderPaymentOnline" datatype="html">
+        <source>Online payment</source>
+        <target>Онлайн оплата</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="orderBtn" datatype="html">
+        <source>Order </source>
+        <target>Замовити</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/product-components/order/order.component.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
