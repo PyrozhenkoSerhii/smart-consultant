@@ -802,10 +802,23 @@ var ChatComponent = /** @class */ (function () {
                 _this.flashMessagesService.show(data.msg, { classes: ['alert', 'alert-danger'], timeout: 2000 });
             }
             localStorage.setItem('user', JSON.stringify(_this.user));
+            var locale = localStorage.getItem('locale');
             if (_this.user.available) {
+                if (locale === 'ru-RU') {
+                    _this.flashMessagesService.show('Вы теперь онлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
+                if (locale === 'uk-UK') {
+                    _this.flashMessagesService.show('Ви тепер онлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
                 _this.flashMessagesService.show('You are online now', { classes: ['alert', 'alert-success'], timeout: 2000 });
             }
             else {
+                if (locale === 'ru-RU') {
+                    _this.flashMessagesService.show('Вы теперь офлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
+                if (locale === 'uk-UK') {
+                    _this.flashMessagesService.show('Ви тепер офлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
                 _this.flashMessagesService.show('You are offline now', { classes: ['alert', 'alert-success'], timeout: 2000 });
             }
         });
@@ -914,14 +927,14 @@ var SelectorComponent = /** @class */ (function () {
 /***/ "./src/app/components/common-components/company-registration/company-registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@companyRegistrationTitle\">Company registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyTitlePlaceholder\" placeholder=\"Company title\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"key\" name=\"key\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyKeyPlaceholder\" placeholder=\"Key to authenticate\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyPhonePlaceholder\" placeholder=\"Phone\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyEmailPlaceholder\" placeholder=\"Email\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"certificateRequirements\" name=\"certificateRequirements\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyRequiredCertificatePlaceholder\" placeholder=\"Required certificate\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@companyRegisterButton\">Register\n          </button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@companyConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@companyCustomerQuestion\">Are you customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@companyLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
+module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@companyRegistrationTitle\">Company registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyTitlePlaceholder\" placeholder=\"Company title\">\n          <span *ngIf=\"validation.title.errorMessage\" [innerText]=\"validation.title.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.title.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"key\" name=\"key\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyKeyPlaceholder\" placeholder=\"Key to authenticate\">\n          <span *ngIf=\"validation.key.errorMessage\" [innerText]=\"validation.key.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.key.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyPhonePlaceholder\" placeholder=\"Phone\">\n          <span *ngIf=\"validation.phone.errorMessage\" [innerText]=\"validation.phone.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.phone.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyEmailPlaceholder\" placeholder=\"Email\">\n          <span *ngIf=\"validation.email.errorMessage\" [innerText]=\"validation.email.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.email.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"certificateRequirements\" name=\"certificateRequirements\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyRequiredCertificatePlaceholder\" placeholder=\"Required certificate\">\n          <span *ngIf=\"validation.certificateRequirements.errorMessage\" [innerText]=\"validation.certificateRequirements.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.certificateRequirements.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@companyRegisterButton\">Register\n          </button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@companyConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@companyCustomerQuestion\">Are you customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@companyLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
 
 /***/ }),
 
 /***/ "./src/app/components/common-components/company-registration/company-registration.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n"
+module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
 
 /***/ }),
 
@@ -957,9 +970,19 @@ var CompanyRegistrationComponent = /** @class */ (function () {
         this.imageSourceDefault = 'https://www.shareicon.net/download/2016/09/01/822725_user_512x512.png';
     }
     CompanyRegistrationComponent.prototype.ngOnInit = function () {
+        this.validation = {
+            title: {},
+            key: {},
+            email: {},
+            phone: {},
+            certificateRequirements: {}
+        };
     };
     CompanyRegistrationComponent.prototype.onRegisterSubmit = function () {
         var _this = this;
+        if (!this.isValidForm()) {
+            return;
+        }
         var company = new __WEBPACK_IMPORTED_MODULE_1__classes_company__["a" /* Company */](this.title.toLocaleLowerCase(), this.key, this.phone, this.email, this.imageSourceDefault, this.certificateRequirements, [], []);
         console.log(company);
         this.authService.registerCompany(company).subscribe(function (data) {
@@ -970,6 +993,71 @@ var CompanyRegistrationComponent = /** @class */ (function () {
                 _this.flashMessagesService.show(data.msg, { classes: ['alert', 'alert-danger'], timeout: 2000 });
             }
         });
+    };
+    CompanyRegistrationComponent.prototype.isValidForm = function () {
+        var validEmail = this.isValidEmail();
+        var validTitle = this.isValidTitle();
+        var validPhone = this.isValidPhone();
+        var validPassword = this.isValidPassword();
+        var validCertificateRequirements = this.isValidCertificateRequirements();
+        return validEmail && validTitle && validPhone && validPassword && validCertificateRequirements;
+    };
+    CompanyRegistrationComponent.prototype.isValidEmail = function () {
+        if (!this.email) {
+            this.validation.email.errorMessage = 'Email field is required';
+            return false;
+        }
+        var pattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
+        if (!this.email.match(pattern)) {
+            this.validation.email.errorMessage = 'Enter a valid email';
+            return false;
+        }
+        this.validation.email.errorMessage = undefined;
+        return true;
+    };
+    CompanyRegistrationComponent.prototype.isValidPassword = function () {
+        if (!this.key) {
+            this.validation.key.errorMessage = 'Key field is required';
+            return false;
+        }
+        if (this.key.length < 2) {
+            this.validation.key.errorMessage = 'Key field must be at least 8 symbols';
+            return false;
+        }
+        this.validation.key.errorMessage = undefined;
+        return true;
+    };
+    CompanyRegistrationComponent.prototype.isValidTitle = function () {
+        if (!this.title) {
+            this.validation.title.errorMessage = 'Title field is required';
+            return false;
+        }
+        if (this.title.length < 2) {
+            this.validation.title.errorMessage = 'Title field must be at least 2 symbols';
+            return false;
+        }
+        this.validation.title.errorMessage = undefined;
+        return true;
+    };
+    CompanyRegistrationComponent.prototype.isValidPhone = function () {
+        if (!this.phone) {
+            this.validation.phone.errorMessage = 'Phone field is required';
+            return false;
+        }
+        if (this.phone.length < 2) {
+            this.validation.phone.errorMessage = 'Phone field must be at least 2 symbols';
+            return false;
+        }
+        this.validation.phone.errorMessage = undefined;
+        return true;
+    };
+    CompanyRegistrationComponent.prototype.isValidCertificateRequirements = function () {
+        if (!this.certificateRequirements) {
+            this.validation.certificateRequirements.errorMessage = 'Requirements field is required';
+            return false;
+        }
+        this.validation.certificateRequirements.errorMessage = undefined;
+        return true;
     };
     CompanyRegistrationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -996,7 +1084,7 @@ module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-m
 /***/ "./src/app/components/common-components/consultant-registration/consultant-registration.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n"
+module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
 
 /***/ }),
 
@@ -1033,6 +1121,13 @@ var ConsultantRegistrationComponent = /** @class */ (function () {
         this.imageSourceDefault = 'https://www.shareicon.net/download/2016/09/01/822725_user_512x512.png';
     }
     ConsultantRegistrationComponent.prototype.ngOnInit = function () {
+        this.validation = {
+            name: {},
+            username: {},
+            email: {},
+            password: {},
+            age: {}
+        };
     };
     ConsultantRegistrationComponent.prototype.onRegisterSubmit = function () {
         var _this = this;
@@ -1069,14 +1164,14 @@ var ConsultantRegistrationComponent = /** @class */ (function () {
 /***/ "./src/app/components/common-components/customer-registration/customer-registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@customerRegistrationTitle\">Customer registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerNamePlaceholder\" placeholder=\"Name\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerUsernamePlaceholder\" placeholder=\"Username (will be used while login)\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerEmailPlaceholder\" placeholder=\"E-mail\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerAgePlaceholder\" placeholder=\"Age\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerPasswordPlaceholder\" placeholder=\"Password\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@customerRegisterButton\">Register\n          </button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@customerConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@customerCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@customerLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
+module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@customerRegistrationTitle\">Customer registration</span>\n        <div class=\"form-group\">\n\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerNamePlaceholder\" placeholder=\"Name\">\n          <span *ngIf=\"validation.name.errorMessage\" [innerText]=\"validation.name.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.name.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerUsernamePlaceholder\" placeholder=\"Username (will be used while login)\">\n          <span *ngIf=\"validation.username.errorMessage\" [innerText]=\"validation.username.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.username.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerEmailPlaceholder\" placeholder=\"E-mail\">\n          <span *ngIf=\"validation.email.errorMessage\" [innerText]=\"validation.email.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.email.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerAgePlaceholder\" placeholder=\"Age\">\n          <span *ngIf=\"validation.age.errorMessage\" [innerText]=\"validation.age.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.age.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@customerPasswordPlaceholder\" placeholder=\"Password\">\n          <span *ngIf=\"validation.password.errorMessage\" [innerText]=\"validation.password.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.password.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@customerRegisterButton\">Register\n          </button>\n        </div>\n\n\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@customerConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@customerCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@customerLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
 
 /***/ }),
 
 /***/ "./src/app/components/common-components/customer-registration/customer-registration.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "/* Form Style */\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\np {\n  color: #686868; }\na {\n  color: #686868; }\n"
+module.exports = "/* Form Style */\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 10px 0;\n  position: relative; }\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\np {\n  color: #686868; }\na {\n  color: #686868; }\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
 
 /***/ }),
 
@@ -1112,9 +1207,19 @@ var CustomerRegistrationComponent = /** @class */ (function () {
         this.imageSourceDefault = 'https://www.shareicon.net/download/2016/09/01/822725_user_512x512.png';
     }
     CustomerRegistrationComponent.prototype.ngOnInit = function () {
+        this.validation = {
+            name: {},
+            username: {},
+            email: {},
+            password: {},
+            age: {}
+        };
     };
     CustomerRegistrationComponent.prototype.onRegisterSubmit = function () {
         var _this = this;
+        if (!this.isValidForm()) {
+            return;
+        }
         var customer = new __WEBPACK_IMPORTED_MODULE_2__classes_customer__["a" /* Customer */](this.name, this.username.toLocaleLowerCase(), this.email, this.password, this.age, this.imageSourceDefault, [], []);
         this.authService.registerCustomer(customer).subscribe(function (data) {
             if (data.success) {
@@ -1124,6 +1229,71 @@ var CustomerRegistrationComponent = /** @class */ (function () {
                 _this.flashMessagesService.show(data.msg, { classes: ['alert', 'alert-danger'], timeout: 2000 });
             }
         });
+    };
+    CustomerRegistrationComponent.prototype.isValidForm = function () {
+        var validEmail = this.isValidEmail();
+        var validUsername = this.isValidUsername();
+        var validName = this.isValidName();
+        var validPassword = this.isValidPassword();
+        var validAge = this.isValidAge();
+        return validEmail && validUsername && validName && validPassword && validAge;
+    };
+    CustomerRegistrationComponent.prototype.isValidEmail = function () {
+        if (!this.email) {
+            this.validation.email.errorMessage = 'Email field is required';
+            return false;
+        }
+        var pattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
+        if (!this.email.match(pattern)) {
+            this.validation.email.errorMessage = 'Enter a valid email';
+            return false;
+        }
+        this.validation.email.errorMessage = undefined;
+        return true;
+    };
+    CustomerRegistrationComponent.prototype.isValidPassword = function () {
+        if (!this.password) {
+            this.validation.password.errorMessage = 'Password field is required';
+            return false;
+        }
+        if (this.password.length < 2) {
+            this.validation.password.errorMessage = 'Password field must be at least 8 symbols';
+            return false;
+        }
+        this.validation.password.errorMessage = undefined;
+        return true;
+    };
+    CustomerRegistrationComponent.prototype.isValidUsername = function () {
+        if (!this.username) {
+            this.validation.username.errorMessage = 'Username field is required';
+            return false;
+        }
+        if (this.username.length < 2) {
+            this.validation.username.errorMessage = 'Username field must be at least 2 symbols';
+            return false;
+        }
+        this.validation.username.errorMessage = undefined;
+        return true;
+    };
+    CustomerRegistrationComponent.prototype.isValidName = function () {
+        if (!this.name) {
+            this.validation.name.errorMessage = 'Name field is required';
+            return false;
+        }
+        if (this.name.length < 2) {
+            this.validation.name.errorMessage = 'Name field must be at least 2 symbols';
+            return false;
+        }
+        this.validation.name.errorMessage = undefined;
+        return true;
+    };
+    CustomerRegistrationComponent.prototype.isValidAge = function () {
+        if (!this.age) {
+            this.validation.age.errorMessage = 'Age field is required';
+            return false;
+        }
+        this.validation.age.errorMessage = undefined;
+        return true;
     };
     CustomerRegistrationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1341,6 +1511,10 @@ var ChatRateModalComponent = /** @class */ (function () {
         }
     };
     ChatRateModalComponent.prototype.evaluationLogic = function (consultantRate, currentRate) {
+        if ((consultantRate + (currentRate - 5) / 2 > 100) && currentRate > 4) {
+            consultantRate = 100;
+            return consultantRate;
+        }
         if (currentRate > 5) {
             if (consultantRate < 50) {
                 consultantRate += (currentRate - 5);
@@ -1363,7 +1537,7 @@ var ChatRateModalComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-chat-rate-modal',
             template: __webpack_require__("./src/app/components/modals/ChatRateModal.html"),
-            styles: ["\n    .star {\n      font-size: 1.5rem;\n      color: #b0c4de;\n    }\n    .filled {\n      color: #1e90ff;\n    }\n    .bad {\n      color: #deb0b0;\n    }\n    .filled.bad {\n      color: #ff1e1e;\n    }\n  "]
+            styles: ["\n    .star {\n      font-size: 1.5rem;\n      color: #b0c4de;\n    }\n\n    .filled {\n      color: #1e90ff;\n    }\n\n    .bad {\n      color: #deb0b0;\n    }\n\n    .filled.bad {\n      color: #ff1e1e;\n    }\n  "]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ng_bootstrap_ng_bootstrap__["b" /* NgbModal */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3__services_profile_service__["a" /* ProfileService */]])
     ], ChatRateModalComponent);
@@ -2190,6 +2364,7 @@ var ProfileComponent = /** @class */ (function () {
                 }
                 else {
                     _this.user = data.customer;
+                    _this.user.purchases = _this.user.purchases.reverse();
                     _this.email = _this.user.email;
                     _this.age = _this.user.age;
                 }
@@ -2203,6 +2378,7 @@ var ProfileComponent = /** @class */ (function () {
                 }
                 else {
                     _this.user = data.consultant;
+                    _this.user.disposals = _this.user.disposals.reverse();
                     _this.email = _this.user.email;
                     _this.age = _this.user.age;
                     _this.phone = _this.user.phone;
@@ -2221,6 +2397,7 @@ var ProfileComponent = /** @class */ (function () {
                 }
                 else {
                     _this.user = data.company;
+                    _this.user.consultants = _this.user.consultants.reverse();
                     _this.email = _this.user.email;
                     _this.requirements = _this.user.requirements;
                     _this.phone = _this.user.phone;
@@ -2377,10 +2554,23 @@ var ProfileComponent = /** @class */ (function () {
                 _this.flashMessagesService.show(data.msg, { classes: ['alert', 'alert-danger'], timeout: 2000 });
             }
             localStorage.setItem('user', JSON.stringify(_this.user));
+            var locale = localStorage.getItem('locale');
             if (_this.user.available) {
+                if (locale === 'ru-RU') {
+                    _this.flashMessagesService.show('Вы теперь онлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
+                if (locale === 'uk-UK') {
+                    _this.flashMessagesService.show('Ви тепер онлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
                 _this.flashMessagesService.show('You are online now', { classes: ['alert', 'alert-success'], timeout: 2000 });
             }
             else {
+                if (locale === 'ru-RU') {
+                    _this.flashMessagesService.show('Вы теперь офлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
+                if (locale === 'uk-UK') {
+                    _this.flashMessagesService.show('Ви тепер офлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
                 _this.flashMessagesService.show('You are offline now', { classes: ['alert', 'alert-success'], timeout: 2000 });
             }
         });
