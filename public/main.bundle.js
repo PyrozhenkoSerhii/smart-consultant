@@ -810,7 +810,9 @@ var ChatComponent = /** @class */ (function () {
                 if (locale === 'uk-UK') {
                     _this.flashMessagesService.show('Ви тепер онлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
                 }
-                _this.flashMessagesService.show('You are online now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                if (!locale) {
+                    _this.flashMessagesService.show('You are online now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
             }
             else {
                 if (locale === 'ru-RU') {
@@ -819,7 +821,9 @@ var ChatComponent = /** @class */ (function () {
                 if (locale === 'uk-UK') {
                     _this.flashMessagesService.show('Ви тепер офлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
                 }
-                _this.flashMessagesService.show('You are offline now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                if (!locale) {
+                    _this.flashMessagesService.show('You are offline now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
             }
         });
     };
@@ -2562,7 +2566,9 @@ var ProfileComponent = /** @class */ (function () {
                 if (locale === 'uk-UK') {
                     _this.flashMessagesService.show('Ви тепер онлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
                 }
-                _this.flashMessagesService.show('You are online now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                if (!locale) {
+                    _this.flashMessagesService.show('You are online now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
             }
             else {
                 if (locale === 'ru-RU') {
@@ -2571,7 +2577,9 @@ var ProfileComponent = /** @class */ (function () {
                 if (locale === 'uk-UK') {
                     _this.flashMessagesService.show('Ви тепер офлайн', { classes: ['alert', 'alert-success'], timeout: 2000 });
                 }
-                _this.flashMessagesService.show('You are offline now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                if (!locale) {
+                    _this.flashMessagesService.show('You are offline now', { classes: ['alert', 'alert-success'], timeout: 2000 });
+                }
             }
         });
     };
