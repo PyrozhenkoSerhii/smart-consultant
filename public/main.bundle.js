@@ -644,6 +644,201 @@ var Transportation = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/classes/validation-message.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidationMessage; });
+var ValidationMessage = /** @class */ (function () {
+    function ValidationMessage() {
+    }
+    ValidationMessage.getRequiredMessage = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return ' должно быть заполнено';
+        }
+        else if (locale === 'uk-UK') {
+            return ' повинно бути заповненим';
+        }
+        else {
+            return ' field is required';
+        }
+    };
+    ValidationMessage.getLengthMessage = function (length) {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return ' должно быть не менее ' + length + ' символов длинной';
+        }
+        else if (locale === 'uk-UK') {
+            return ' повинно бути не менш за ' + length + ' символів довжиною';
+        }
+        else {
+            return ' must be at least ' + length + ' symbols';
+        }
+    };
+    ValidationMessage.getValidEmailMessage = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Введите корректную почту';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Введіть коректну пошту';
+        }
+        else {
+            return 'Enter a valid email';
+        }
+    };
+    ValidationMessage.getNameField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Имя';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Ім\'я';
+        }
+        else {
+            return 'Name';
+        }
+    };
+    ValidationMessage.getUsernameField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Имя пользователя';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Ім\'я користувача';
+        }
+        else {
+            return 'Username';
+        }
+    };
+    ValidationMessage.getEmailField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле Почта';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Пошта';
+        }
+        else {
+            return 'Email';
+        }
+    };
+    ValidationMessage.getAgeField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле позраст';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Вік';
+        }
+        else {
+            return 'Age';
+        }
+    };
+    ValidationMessage.getTitleField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Название';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Назва';
+        }
+        else {
+            return 'Title';
+        }
+    };
+    ValidationMessage.getPasswordField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле Пароль';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле пароль';
+        }
+        else {
+            return 'Password';
+        }
+    };
+    ValidationMessage.getKeyField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле Ключ';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Ключ';
+        }
+        else {
+            return 'Key';
+        }
+    };
+    ValidationMessage.getPhoneField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле Телефон';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Телефон';
+        }
+        else {
+            return 'Phone';
+        }
+    };
+    ValidationMessage.getRequirementsField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле требований';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле вимог';
+        }
+        else {
+            return 'Requirements';
+        }
+    };
+    ValidationMessage.getLanguagesField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле Языков';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Мов';
+        }
+        else {
+            return 'Languages';
+        }
+    };
+    ValidationMessage.getCertificatesField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле сертификатов';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле сертифікатів';
+        }
+        else {
+            return 'Certificates';
+        }
+    };
+    ValidationMessage.getCategoriesField = function () {
+        var locale = localStorage.getItem('locale');
+        if (locale === 'ru-RU') {
+            return 'Поле Категория';
+        }
+        else if (locale === 'uk-UK') {
+            return 'Поле Категорія';
+        }
+        else {
+            return 'Categories';
+        }
+    };
+    return ValidationMessage;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/classes/work-request.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -931,14 +1126,14 @@ var SelectorComponent = /** @class */ (function () {
 /***/ "./src/app/components/common-components/company-registration/company-registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@companyRegistrationTitle\">Company registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyTitlePlaceholder\" placeholder=\"Company title\">\n          <span *ngIf=\"validation.title.errorMessage\" [innerText]=\"validation.title.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.title.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"key\" name=\"key\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyKeyPlaceholder\" placeholder=\"Key to authenticate\">\n          <span *ngIf=\"validation.key.errorMessage\" [innerText]=\"validation.key.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.key.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyPhonePlaceholder\" placeholder=\"Phone\">\n          <span *ngIf=\"validation.phone.errorMessage\" [innerText]=\"validation.phone.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.phone.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyEmailPlaceholder\" placeholder=\"Email\">\n          <span *ngIf=\"validation.email.errorMessage\" [innerText]=\"validation.email.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.email.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"certificateRequirements\" name=\"certificateRequirements\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyRequiredCertificatePlaceholder\" placeholder=\"Required certificate\">\n          <span *ngIf=\"validation.certificateRequirements.errorMessage\" [innerText]=\"validation.certificateRequirements.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.certificateRequirements.errorMessage\" />\n\n\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@companyRegisterButton\">Register\n          </button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@companyConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@companyCustomerQuestion\">Are you customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@companyLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
+module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading\" style=\"color: #686868\" i18n=\"@@companyRegistrationTitle\">Company registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyTitlePlaceholder\" placeholder=\"Company title\">\n          <span *ngIf=\"validation.title.errorMessage\" [innerText]=\"validation.title.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.title.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"key\" name=\"key\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyKeyPlaceholder\" placeholder=\"Key to authenticate\">\n          <span *ngIf=\"validation.key.errorMessage\" [innerText]=\"validation.key.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.key.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyPhonePlaceholder\" placeholder=\"Phone\">\n          <span *ngIf=\"validation.phone.errorMessage\" [innerText]=\"validation.phone.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.phone.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyEmailPlaceholder\" placeholder=\"Email\">\n          <span *ngIf=\"validation.email.errorMessage\" [innerText]=\"validation.email.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.email.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"certificateRequirements\" name=\"certificateRequirements\" class=\"form-control\"\n                 i18n-placeholder=\"@@companyRequiredCertificatePlaceholder\" placeholder=\"Required certificate\">\n          <span *ngIf=\"validation.certificateRequirements.errorMessage\" [innerText]=\"validation.certificateRequirements.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.certificateRequirements.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@companyRegisterButton\">Register\n          </button>\n        </div>\n\n\n        <a class=\"navbar-brand\" [routerLink]=\"['/consultantRegistration']\"\n           i18n=\"@@companyConsultantQuestion\">Are you a consultant?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@companyCustomerQuestion\">Are you customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@companyLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
 
 /***/ }),
 
 /***/ "./src/app/components/common-components/company-registration/company-registration.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
+module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 10px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
 
 /***/ }),
 
@@ -952,6 +1147,7 @@ module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_flash_messages__ = __webpack_require__("./node_modules/ngx-flash-messages/lib-dist/flash-messages.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__ = __webpack_require__("./src/app/classes/validation-message.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -961,6 +1157,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1008,12 +1205,11 @@ var CompanyRegistrationComponent = /** @class */ (function () {
     };
     CompanyRegistrationComponent.prototype.isValidEmail = function () {
         if (!this.email) {
-            this.validation.email.errorMessage = 'Email field is required';
+            this.validation.email.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getEmailField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
-        var pattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
-        if (!this.email.match(pattern)) {
-            this.validation.email.errorMessage = 'Enter a valid email';
+        if (!this.email.includes('@') || !this.email.includes('.')) {
+            this.validation.email.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getValidEmailMessage();
             return false;
         }
         this.validation.email.errorMessage = undefined;
@@ -1021,11 +1217,11 @@ var CompanyRegistrationComponent = /** @class */ (function () {
     };
     CompanyRegistrationComponent.prototype.isValidPassword = function () {
         if (!this.key) {
-            this.validation.key.errorMessage = 'Key field is required';
+            this.validation.key.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getKeyField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
-        if (this.key.length < 2) {
-            this.validation.key.errorMessage = 'Key field must be at least 8 symbols';
+        if (this.key.length < 8) {
+            this.validation.key.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getKeyField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(8);
             return false;
         }
         this.validation.key.errorMessage = undefined;
@@ -1033,11 +1229,11 @@ var CompanyRegistrationComponent = /** @class */ (function () {
     };
     CompanyRegistrationComponent.prototype.isValidTitle = function () {
         if (!this.title) {
-            this.validation.title.errorMessage = 'Title field is required';
+            this.validation.title.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getTitleField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
         if (this.title.length < 2) {
-            this.validation.title.errorMessage = 'Title field must be at least 2 symbols';
+            this.validation.title.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getTitleField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(2);
             return false;
         }
         this.validation.title.errorMessage = undefined;
@@ -1045,11 +1241,11 @@ var CompanyRegistrationComponent = /** @class */ (function () {
     };
     CompanyRegistrationComponent.prototype.isValidPhone = function () {
         if (!this.phone) {
-            this.validation.phone.errorMessage = 'Phone field is required';
+            this.validation.phone.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPhoneField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
-        if (this.phone.length < 2) {
-            this.validation.phone.errorMessage = 'Phone field must be at least 2 symbols';
+        if (this.phone.length < 6) {
+            this.validation.phone.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPhoneField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(6);
             return false;
         }
         this.validation.phone.errorMessage = undefined;
@@ -1057,7 +1253,8 @@ var CompanyRegistrationComponent = /** @class */ (function () {
     };
     CompanyRegistrationComponent.prototype.isValidCertificateRequirements = function () {
         if (!this.certificateRequirements) {
-            this.validation.certificateRequirements.errorMessage = 'Requirements field is required';
+            this.validation.certificateRequirements.errorMessage
+                = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequirementsField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
         this.validation.certificateRequirements.errorMessage = undefined;
@@ -1081,14 +1278,14 @@ var CompanyRegistrationComponent = /** @class */ (function () {
 /***/ "./src/app/components/common-components/consultant-registration/consultant-registration.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading \" style=\"color: #686868\"\n              i18n=\"@@consultantRegistrationTitle\">Consultant registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantNamePlaceholder\" placeholder=\"Name\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantUsernamePlaceholder\" placeholder=\"Username (will be used while login)\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantEmailPlaceholder\" placeholder=\"E-mail\">\n        </div>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"languages\" name=\"languages\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantLanguagePlaceholder\" placeholder=\"What languages do you now or prefer?\">\n        </div>\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"certificate\" name=\"certificate\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCertificatePlaceholder\" placeholder=\"Certificates (with serial number)\">\n            </div>\n          </div>\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantAgePlaceholder\" placeholder=\"Age\">\n            </div>\n          </div>\n        </div>\n\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"card\" name=\"card\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCardPlaceholder\" placeholder=\"Card\">\n            </div>\n          </div>\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantPhonePlaceholder\" placeholder=\"Phone\">\n\n            </div>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <select class=\"form-control\" #curCategoty (change)=\"changeCurrentCategory(curCategoty.value)\">\n            <option i18n=\"@@consultantCategory\">Choose preferable category</option>\n            <option *ngFor=\"let category of categories\" [value]=\"category\">{{category}}</option>\n          </select>\n        </div>\n\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantPasswordPlaceholder\" placeholder=\"Password\">\n        </div>\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@consultantRegisterButton\" >Register</button>\n        </div>\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@consultantCustomerQuestion\">Are you a customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@consultantCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@consultantLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
+module.exports = "<div class=\"container\">\n  <ngx-flash-messages></ngx-flash-messages>\n  <div class=\"row\">\n    <div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n      <script src=\"register.component.ts\"></script>\n      <br>\n      <form (submit)=\"onRegisterSubmit()\" class=\"form-horizontal form-style\">\n        <span class=\"heading \" style=\"color: #686868\"\n              i18n=\"@@consultantRegistrationTitle\">Consultant registration</span>\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantNamePlaceholder\" placeholder=\"Name\">\n          <span *ngIf=\"validation.name.errorMessage\" [innerText]=\"validation.name.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.name.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantUsernamePlaceholder\" placeholder=\"Username (will be used while login)\">\n          <span *ngIf=\"validation.username.errorMessage\" [innerText]=\"validation.username.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.username.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantEmailPlaceholder\" placeholder=\"E-mail\">\n          <span *ngIf=\"validation.email.errorMessage\" [innerText]=\"validation.email.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.email.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"text\" [(ngModel)]=\"languages\" name=\"languages\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantLanguagePlaceholder\" placeholder=\"What languages do you now or prefer?\">\n          <span *ngIf=\"validation.languages.errorMessage\" [innerText]=\"validation.languages.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.languages.errorMessage\" />\n        </div>\n\n\n        <div class=\"row\">\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"certificate\" name=\"certificate\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCertificatePlaceholder\" placeholder=\"Certificates (with serial number)\">\n              <span *ngIf=\"validation.certificate.errorMessage\" [innerText]=\"validation.certificate.errorMessage\" class=\"invalid\"></span>\n              <br *ngIf=\"!validation.certificate.errorMessage\" />\n            </div>\n          </div>\n\n\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"age\" name=\"age\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantAgePlaceholder\" placeholder=\"Age\">\n              <span *ngIf=\"validation.age.errorMessage\" [innerText]=\"validation.age.errorMessage\" class=\"invalid\"></span>\n              <br *ngIf=\"!validation.age.errorMessage\" />\n            </div>\n\n          </div>\n        </div>\n\n        <div class=\"row\">\n\n          <div class=\"col-sm-7\">\n            <div class=\"form-group-inline-left\">\n              <input type=\"text\" [(ngModel)]=\"card\" name=\"card\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantCardPlaceholder\" placeholder=\"Card\">\n              <br />\n            </div>\n          </div>\n\n\n          <div class=\"col-sm-5\">\n            <div class=\"form-group-inline-right\">\n              <input type=\"text\" [(ngModel)]=\"phone\" name=\"phone\" class=\"form-control\"\n                     i18n-placeholder=\"@@consultantPhonePlaceholder\" placeholder=\"Phone\">\n              <span *ngIf=\"validation.phone.errorMessage\" [innerText]=\"validation.phone.errorMessage\" class=\"invalid\"></span>\n              <br *ngIf=\"!validation.phone.errorMessage\" />\n            </div>\n          </div>\n\n        </div>\n\n        <div class=\"form-group\">\n          <select class=\"form-control\" #curCategoty (change)=\"changeCurrentCategory(curCategoty.value)\">\n            <option i18n=\"@@consultantCategory\">Choose preferable category</option>\n            <option *ngFor=\"let category of categories\" [value]=\"category\">{{category}}</option>\n          </select>\n          <span *ngIf=\"validation.age.errorMessage\" [innerText]=\"validation.age.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.age.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\"\n                 i18n-placeholder=\"@@consultantPasswordPlaceholder\" placeholder=\"Password\">\n          <span *ngIf=\"validation.password.errorMessage\" [innerText]=\"validation.password.errorMessage\" class=\"invalid\"></span>\n          <br *ngIf=\"!validation.password.errorMessage\" />\n        </div>\n\n\n        <div class=\"form-group\">\n          <button type=\"submit\" style=\"text-align: center; float:none\" class=\"btn btn-primary center-block\"\n                  i18n=\"@@consultantRegisterButton\" >Register</button>\n        </div>\n\n\n        <a class=\"navbar-brand\" [routerLink]=\"['/customerRegistration']\"\n           i18n=\"@@consultantCustomerQuestion\">Are you a customer?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/companyRegistration']\"\n           i18n=\"@@consultantCompanyQuestion\">Are you company manager?</a>\n        <a class=\"navbar-brand\" [routerLink]=\"['/login']\"\n           i18n=\"@@consultantLoginQuestion\">Already have an account?</a>\n      </form>\n    </div>\n  </div>\n</div>\n<br><br><br>\n"
 
 /***/ }),
 
 /***/ "./src/app/components/common-components/consultant-registration/consultant-registration.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 25px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
+module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px 0 0;\n  margin: 0 0 10px 0;\n  position: relative; }\n\n.form-horizontal .form-group-inline-left {\n  padding: 0 0 0 40px;\n  margin: 0 0 10px 0;\n  position: relative; }\n\nselect {\n  color: #858585; }\n\n/* Form Style */\n\n.form-horizontal {\n  background: #fff;\n  padding-bottom: 40px;\n  border-radius: 15px;\n  text-align: center; }\n\n.form-horizontal .heading {\n  display: block;\n  font-size: 35px;\n  font-weight: 700;\n  padding: 35px 0;\n  border-bottom: 1px solid #f0f0f0;\n  margin-bottom: 30px; }\n\n.form-horizontal .form-group {\n  padding: 0 40px;\n  margin: 0 0 10px 0;\n  position: relative; }\n\n.form-horizontal .form-control {\n  background: #f0f0f0;\n  border: 1px solid #cacaca;\n  border-radius: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 0 20px 0 45px;\n  height: 40px;\n  -webkit-transition: all 0.3s ease 0s;\n  transition: all 0.3s ease 0s; }\n\n.form-horizontal .form-control:focus {\n  background: #d0e6ff;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  outline: 0 none; }\n\n.form-horizontal .form-group i {\n  position: absolute;\n  top: 12px;\n  left: 60px;\n  font-size: 17px;\n  color: #c8c8c8;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .form-control:focus + i {\n  color: #00b4ef; }\n\n.form-horizontal .fa-question-circle {\n  display: inline-block;\n  position: absolute;\n  top: 12px;\n  right: 60px;\n  font-size: 20px;\n  color: #101010;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .fa-question-circle:hover {\n  color: #000; }\n\n.form-horizontal .main-checkbox {\n  float: left;\n  width: 20px;\n  height: 20px;\n  background: #11a3fc;\n  border-radius: 50%;\n  position: relative;\n  margin: 5px 0 0 5px;\n  border: 1px solid #70fc3e; }\n\n.form-horizontal .main-checkbox label {\n  width: 20px;\n  height: 20px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  cursor: pointer; }\n\n.form-horizontal .main-checkbox label:after {\n  content: \"\";\n  width: 10px;\n  height: 5px;\n  position: absolute;\n  top: 5px;\n  left: 4px;\n  border: 3px solid #fff;\n  border-top: none;\n  border-right: none;\n  background: transparent;\n  opacity: 0;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg); }\n\n.form-horizontal .main-checkbox input[type=checkbox] {\n  visibility: hidden; }\n\n.form-horizontal .main-checkbox input[type=checkbox]:checked + label:after {\n  opacity: 1; }\n\n.form-horizontal .text {\n  float: left;\n  margin-left: 7px;\n  line-height: 20px;\n  padding-top: 5px;\n  text-transform: capitalize; }\n\n.form-horizontal .btn {\n  float: right;\n  font-size: 14px;\n  color: #333334;\n  background: #f0f0f0;\n  border-radius: 15px;\n  padding: 10px 25px;\n  border: 1px solid #cacaca;\n  cursor: pointer;\n  text-transform: capitalize;\n  -webkit-transition: all 0.5s ease 0s;\n  transition: all 0.5s ease 0s; }\n\n.form-horizontal .btn:hover {\n  background-color: #d0e6ff; }\n\n@media only screen and (max-width: 479px) {\n  .form-horizontal .form-group {\n    padding: 0 25px; }\n  .form-horizontal .form-group i {\n    left: 45px; }\n  .form-horizontal .btn {\n    padding: 10px 20px; } }\n\n.form-style {\n  background: #f8f1ff;\n  border: 2px solid #cacaca; }\n\np {\n  color: #686868; }\n\na {\n  color: #686868; }\n\n.invalid {\n  color: rgba(255, 0, 0, 0.7);\n  font-style: italic;\n  font-size: 15px; }\n"
 
 /***/ }),
 
@@ -1102,6 +1299,7 @@ module.exports = ".form-horizontal .form-group-inline-right {\n  padding: 0 40px
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_flash_messages__ = __webpack_require__("./node_modules/ngx-flash-messages/lib-dist/flash-messages.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__ = __webpack_require__("./src/app/classes/validation-message.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1111,6 +1309,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1130,11 +1329,18 @@ var ConsultantRegistrationComponent = /** @class */ (function () {
             username: {},
             email: {},
             password: {},
-            age: {}
+            age: {},
+            phone: {},
+            languages: {},
+            certificate: {},
+            category: {},
         };
     };
     ConsultantRegistrationComponent.prototype.onRegisterSubmit = function () {
         var _this = this;
+        if (!this.isValidForm()) {
+            return;
+        }
         this.category = this.category === undefined ? null : this.category;
         var consultant = new __WEBPACK_IMPORTED_MODULE_1__classes_consultant__["a" /* Consultant */](this.name, this.username.toLocaleLowerCase(), this.email, this.password, this.age, this.phone, this.languages, this.card, this.category, this.certificate, false, 0, '30', this.imageSourceDefault, 0, null, [], []);
         console.log(consultant);
@@ -1149,6 +1355,111 @@ var ConsultantRegistrationComponent = /** @class */ (function () {
     };
     ConsultantRegistrationComponent.prototype.changeCurrentCategory = function (category) {
         this.category = category;
+    };
+    ConsultantRegistrationComponent.prototype.isValidForm = function () {
+        var validEmail = this.isValidEmail();
+        var validUsername = this.isValidUsername();
+        var validName = this.isValidName();
+        var validPassword = this.isValidPassword();
+        var validAge = this.isValidAge();
+        var validPhone = this.isValidPhone();
+        var validLanguages = this.isValidLang();
+        var validCertificates = this.isValidCertificates();
+        var validCategory = this.isValidCategory();
+        return validEmail && validUsername && validName && validPassword && validAge
+            && validPhone && validLanguages && validCertificates && validCategory;
+    };
+    ConsultantRegistrationComponent.prototype.isValidEmail = function () {
+        if (!this.email) {
+            this.validation.email.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getEmailField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        if (!this.email.includes('@') || !this.email.includes('.')) {
+            this.validation.email.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getValidEmailMessage();
+            return false;
+        }
+        this.validation.email.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidPassword = function () {
+        if (!this.password) {
+            this.validation.password.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        if (this.password.length < 8) {
+            this.validation.password.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(8);
+            return false;
+        }
+        this.validation.password.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidUsername = function () {
+        if (!this.username) {
+            this.validation.username.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getUsernameField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        if (this.username.length < 2) {
+            this.validation.username.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(2);
+            return false;
+        }
+        this.validation.username.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidName = function () {
+        if (!this.name) {
+            this.validation.name.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getNameField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        if (this.name.length < 2) {
+            this.validation.name.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(2);
+            return false;
+        }
+        this.validation.name.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidAge = function () {
+        if (!this.age) {
+            this.validation.age.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getAgeField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        this.validation.age.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidLang = function () {
+        if (!this.languages) {
+            this.validation.languages.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLanguagesField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        this.validation.languages.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidCategory = function () {
+        if (!this.category) {
+            this.validation.category.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getCategoriesField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        this.validation.category.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidCertificates = function () {
+        if (!this.certificate) {
+            this.validation.certificate.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getCertificatesField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        this.validation.certificate.errorMessage = undefined;
+        return true;
+    };
+    ConsultantRegistrationComponent.prototype.isValidPhone = function () {
+        if (!this.phone) {
+            this.validation.phone.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPhoneField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
+            return false;
+        }
+        if (this.phone.length < 6) {
+            this.validation.phone.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPhoneField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(6);
+            return false;
+        }
+        this.validation.phone.errorMessage = undefined;
+        return true;
     };
     ConsultantRegistrationComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1189,6 +1500,7 @@ module.exports = "/* Form Style */\n.form-horizontal {\n  background: #fff;\n  p
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_customer__ = __webpack_require__("./src/app/classes/customer.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_flash_messages__ = __webpack_require__("./node_modules/ngx-flash-messages/lib-dist/flash-messages.module.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__ = __webpack_require__("./src/app/classes/validation-message.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1198,6 +1510,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1244,24 +1557,28 @@ var CustomerRegistrationComponent = /** @class */ (function () {
     };
     CustomerRegistrationComponent.prototype.isValidEmail = function () {
         if (!this.email) {
-            this.validation.email.errorMessage = 'Email field is required';
+            this.validation.email.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getEmailField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
-        var pattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
-        if (!this.email.match(pattern)) {
-            this.validation.email.errorMessage = 'Enter a valid email';
+        if (!this.email.includes('@') || !this.email.includes('.')) {
+            this.validation.email.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getValidEmailMessage();
             return false;
         }
+        // const pattern = '^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$';
+        // if (!this.email.match(pattern)) {
+        //   this.validation.email.errorMessage = ValidationMessage.getValidEmailMessage();
+        //   return false;
+        // }
         this.validation.email.errorMessage = undefined;
         return true;
     };
     CustomerRegistrationComponent.prototype.isValidPassword = function () {
         if (!this.password) {
-            this.validation.password.errorMessage = 'Password field is required';
+            this.validation.password.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
-        if (this.password.length < 2) {
-            this.validation.password.errorMessage = 'Password field must be at least 8 symbols';
+        if (this.password.length < 8) {
+            this.validation.password.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(8);
             return false;
         }
         this.validation.password.errorMessage = undefined;
@@ -1269,11 +1586,11 @@ var CustomerRegistrationComponent = /** @class */ (function () {
     };
     CustomerRegistrationComponent.prototype.isValidUsername = function () {
         if (!this.username) {
-            this.validation.username.errorMessage = 'Username field is required';
+            this.validation.username.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getUsernameField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
         if (this.username.length < 2) {
-            this.validation.username.errorMessage = 'Username field must be at least 2 symbols';
+            this.validation.username.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(2);
             return false;
         }
         this.validation.username.errorMessage = undefined;
@@ -1281,11 +1598,11 @@ var CustomerRegistrationComponent = /** @class */ (function () {
     };
     CustomerRegistrationComponent.prototype.isValidName = function () {
         if (!this.name) {
-            this.validation.name.errorMessage = 'Name field is required';
+            this.validation.name.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getNameField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
         if (this.name.length < 2) {
-            this.validation.name.errorMessage = 'Name field must be at least 2 symbols';
+            this.validation.name.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getPasswordField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getLengthMessage(2);
             return false;
         }
         this.validation.name.errorMessage = undefined;
@@ -1293,7 +1610,7 @@ var CustomerRegistrationComponent = /** @class */ (function () {
     };
     CustomerRegistrationComponent.prototype.isValidAge = function () {
         if (!this.age) {
-            this.validation.age.errorMessage = 'Age field is required';
+            this.validation.age.errorMessage = __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getAgeField() + __WEBPACK_IMPORTED_MODULE_5__classes_validation_message__["a" /* ValidationMessage */].getRequiredMessage();
             return false;
         }
         this.validation.age.errorMessage = undefined;
